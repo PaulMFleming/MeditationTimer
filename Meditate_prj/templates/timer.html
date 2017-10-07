@@ -7,6 +7,17 @@
     <div id="container">
 
         <h2>Do you want to set an intention for your meditation?</h2>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Examples
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"> I dedicate my meditation to calming my mind </li>
+                <li role="presentation"> I decdicate my meditation to reducing stress in my life </li>
+                <li role="presentation"> I dedicate my meditation to someone in need </li>
+                <li role="presentation"> I dedicate my meditation to all the sick people in the world </li>
+                <li role="presentation"> I dedicate my meditation to improving our environment </li>
+            </ul>
+        </div>
         <input type="text" id="intention" value=" set intention">
         <br><br>
 
@@ -85,8 +96,6 @@
 
 
         <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Start</button>
-        <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
-        <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
         <br><br>
 
         
@@ -99,16 +108,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Meditation Timer</h4>
             </div>
             <div class="modal-body">
-                <p>Prep Time</p>
-                <input type="text" id='prep-text' value="  choose  prep time">
 
                 <p>Meditation Time</p>
                 <input type="text" id='text' value="  choose time">
             </div>
             <div class="modal-footer">
+                <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
+                <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>  
