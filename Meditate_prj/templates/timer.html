@@ -3,50 +3,115 @@
 
 
 {% block content %}
-    <h2>Timer Page!</h2>
+
     <div id="container">
 
-        <p>Set Prep Time</p>
-        <button id="tenSec" onclick="setTenPrep()">10 sec</button>
-        <button id="thirtySec" onclick="setThirtyPrep()">30 sec</button>
-        <button id="sixtySec" onclick="setSixtyPrep()">1 min</button>
-        <br><br>
-        <input type="text" id='prep-text' value="  choose  prep time">
+        <h2>Do you want to set an intention for your meditation?</h2>
+        <input type="text" id="intention" value=" set intention">
         <br><br>
 
-        <p>How long do you want to meditate for?</p>
-        <button id="threeMin" onclick="setThreeMin()">3 min</button>
-        <button id="fiveMin" onclick="setFiveMin()">5 min</button>
-        <button id="sevenMin" onclick="setSevenMin()">7 min</button>
-        <button id="tenMin" onclick="setTenMin()">10 min</button>
-        <button id="thirteenMin" onclick="setThirteenMin()">13 min</button>
-        <button id="fifteenMin" onclick="setFifteenMin()">15 min</button>
+        <h2>Prep Time</h2>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active" onclick="setTenPrep()">
+                <input type="radio" name="options" id="tenSec" autocomplete="off" checked>10 sec
+            </label>
+            <label class="btn btn-primary" onclick="setThirtyPrep()">
+                <input type="radio" name="options" id="thirtySec" autocomplete="off">30 sec
+            </label>
+            <label class="btn btn-primary" onclick="setSixtyPrep()">
+                <input type="radio" name="options" id="sixtySec" autocomplete="off">60 sec
+            </label>
+        </div>
         <br><br>
-        <input type="text" id='text' value="  choose time">
+        
+        <h2>Meditation Time</h2>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active" onclick="setThreeMin()">
+                <input type="radio" name="options" id="threeMin" autocomplete="off" checked>3 mins
+            </label>
+            <label class="btn btn-primary" onclick="setFiveMin()">
+                <input type="radio" name="options" id="fiveMin" autocomplete="off">5 mins
+            </label>
+            <label class="btn btn-primary" onclick="setSevenMin()">
+                <input type="radio" name="options" id="sevenMin" autocomplete="off">7 mins
+            </label>
+            <label class="btn btn-primary" onclick="setTenMin()">
+                <input type="radio" name="options" id="tenMin" autocomplete="off">10 mins
+            </label>
+            <label class="btn btn-primary" onclick="setThirteenMin()">
+                <input type="radio" name="options" id="thirteenMin" autocomplete="off">13 mins
+            </label>
+            <label class="btn btn-primary" onclick="setFifteenMin()">
+                <input type="radio" name="options" id="fifteenMin" autocomplete="off">15 mins
+            </label>    
+        </div>
         <br><br>
 
-        <p>Choose Bell Sound</p>
-        <button id="bellOne" onclick="setBellOne()">Bell One</button>
-        <button id="bellTwo" onclick="setBellTwo()">Bell Two</button>
-        <button id="bellThree" onclick="setBellThree()">Bell Three</button>
-        <button id="bellFour" onclick="setBellFour()">Bell Four</button>    
+        <h2>Bell Sound</h2>
+        <div class="btn-group" data-toggle="buttons">
+           <label class="btn btn-primary active" onclick="setBellOne()">
+               <input type="radio" name="options" id="bellOne" autocomplete="off"   checked> Bell One
+           </label>
+           <label class="btn btn-primary" onclick="setBellTwo()">
+             <input type="radio" name="options" id="bellTwo" autocomplete="off" > Bell Two
+           </label>
+           <label class="btn btn-primary" onclick="setBellThree()">
+             <input type="radio" name="options" id="bellThree" autocomplete="off" > Bell Three
+           </label>
+           <label class="btn btn-primary" onclick="setBellFour()">
+             <input type="radio" name="options" id="bellFour" autocomplete="off" > Bell Four
+           </label>
+        </div> 
         <br><br>
 
-        <p>Choose Ambient Sound</p>
-        <button id="ambientOne" onclick="setAmbientOne()">Ambient One</button>
-        <button id="ambientTwo" onclick="setAmbientTwo()">Ambient Two</button>
-        <button id="ambientThree" onclick="setAmbientThree()">Ambient Three</button>
-        <button id="noAmbient" onclick="setNoAmbient()">No Ambient Sound</button>    
+        <h2>Ambient Sound</h2>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active" onclick="setNoAmbient()">
+                <input type="radio" name="options" id="noAmbient" autocomplete="off"   checked> No Sound
+            </label>
+            <label class="btn btn-primary" onclick="setAmbientOne()">
+              <input type="radio" name="options" id="ambientOne" autocomplete="off" > Ambient One
+            </label>
+            <label class="btn btn-primary" onclick="setAmbientTwo()">
+              <input type="radio" name="options" id="ambientTwo" autocomplete="off" > Ambient Two
+            </label>
+            <label class="btn btn-primary" onclick="setAmbientThree()">
+              <input type="radio" name="options" id="ambientThree" autocomplete="off" > Ambient Three
+            </label>
+        </div> 
+ 
+
         <br><br>
 
-        <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()">Start</button>
+
+        <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Start</button>
         <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
         <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
         <br><br>
 
-        <p>Do you want to set an intention for your meditation?</p>
-        <input type="text" id="intention" value=" set intention">
-        <br><br>
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Prep Time</p>
+                <input type="text" id='prep-text' value="  choose  prep time">
+
+                <p>Meditation Time</p>
+                <input type="text" id='text' value="  choose time">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>  
     </div>
 
     <!-- Bells -->

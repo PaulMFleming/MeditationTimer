@@ -1,5 +1,5 @@
-var counter =  moment.utc(180*1000).format('mm:ss');
-var prepCounter = moment.utc(180*1000).format('mm:ss');
+var counter =  180;
+var prepCounter = 10;
 var t;
 var isTimerOn = false;
 
@@ -8,7 +8,7 @@ var ambient = document.getElementById("no-ambient");
 var ambientSampler = document.getElementById("no-ambient");
 
 function prepCountdown() {
-    document.getElementById("prep-text").value = moment.utc(prepCounter*1000).format('mm:ss');
+    document.getElementById("text").value = moment.utc(prepCounter*1000).format('mm:ss');
     prepCounter--;
     t = setTimeout("prepCountdown();", 1000);
 
@@ -16,6 +16,17 @@ function prepCountdown() {
         isTimerOn = false;
         stopMe();
         startMe();
+    }
+}
+
+function startMe() {
+    tone.pause();
+    tone.currentTime = 0;
+    if (!isTimerOn) {
+      isTimerOn = true;
+      tone.play();
+      ambient.play();
+      countdown();
     }
 }
 
@@ -28,17 +39,6 @@ function countdown() {
     if (counter < 0) {
       stopMe();
       tone.play();
-    }
-}
-
-function startMe() {
-    tone.pause();
-    tone.currentTime = 0;
-    if (!isTimerOn) {
-      isTimerOn = true;
-      tone.play();
-      ambient.play();
-      countdown();
     }
 }
 
