@@ -3,7 +3,9 @@ var prepCounter = moment.utc(180*1000).format('mm:ss');
 var t;
 var isTimerOn = false;
 
-var tone = document.getElementById("bell-one");;
+var tone = document.getElementById("bell-one");
+var ambient = document.getElementById("no-ambient");
+var ambientSampler = document.getElementById("no-ambient");
 
 function prepCountdown() {
     document.getElementById("prep-text").value = moment.utc(prepCounter*1000).format('mm:ss');
@@ -41,6 +43,7 @@ function startMe() {
     if (!isTimerOn) {
       isTimerOn = true;
       tone.play();
+      ambient.play();
       countdown();
     }
 }
@@ -159,4 +162,50 @@ function setBellFour() {
     tone = document.getElementById("bell-four");
     tone.play();
     return tone
+}
+
+function setAmbientOne(){
+    tone.pause();
+    tone.currentTime = 0;
+    ambientSampler.pause();
+    ambientSampler.currentTime = 0;
+    ambient = document.getElementById("ambient-one");
+    ambientSampler = document.getElementById("ambient-one-sampler");
+    ambientSampler.play();
+    return ambient;
+    return ambientSampler;
+}
+
+function setAmbientTwo(){
+    tone.pause();
+    tone.currentTime = 0;
+    ambientSampler.pause();
+    ambientSampler.currentTime = 0;
+    ambient = document.getElementById("ambient-two");
+    ambientSampler = document.getElementById("ambient-two-sampler");
+    ambientSampler.play();
+    return ambient;
+    return ambientSampler;
+}
+
+function setAmbientThree(){
+    tone.pause();
+    tone.currentTime = 0;
+    ambientSampler.pause();
+    ambientSampler.currentTime = 0;
+    ambient = document.getElementById("ambient-three");
+    ambientSampler = document.getElementById("ambient-three-sampler");
+    ambientSampler.play();
+    return ambient;
+    return ambientSampler;
+}
+
+function setNoAmbient(){
+    tone.pause();
+    tone.currentTime = 0;
+    ambient.pause();
+    ambient.currentTime = 0;
+    ambient = document.getElementById("no-ambient");
+    ambient.play();
+    return ambient;
 }

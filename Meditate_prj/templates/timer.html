@@ -26,8 +26,6 @@
         <br><br>
 
         <input type="text" id='text' value="  choose time">
-        <br><br>
-
         <input type="button" value="Begin" onclick="startMe();">
         <input type="button" value="Pause" onclick="stopMe();">
         <input type="button" value="Finish Early" onclick="resetMe();">
@@ -42,8 +40,16 @@
         <button id="bellTwo" onclick="setBellTwo()">Bell Two</button>
         <button id="bellThree" onclick="setBellThree()">Bell Three</button>
         <button id="bellFour" onclick="setBellFour()">Bell Four</button>    
+        <br><br>
+
+        <p>Choose Ambient Sound</p>
+        <button id="ambientOne" onclick="setAmbientOne()">Ambient One</button>
+        <button id="ambientTwo" onclick="setAmbientTwo()">Ambient Two</button>
+        <button id="ambientThree" onclick="setAmbientThree()">Ambient Three</button>
+        <button id="noAmbient" onclick="setNoAmbient()">No Ambient Sound</button>    
     </div>
 
+    <!-- Bells -->
     <audio class="bells" id="bell-one">
         <source src="{% static "/media/audio/bells/bellOne.mp3" %}">
     </audio>
@@ -57,6 +63,28 @@
         <source src="{% static "/media/audio/bells/bellFour.mp3" %}">
     </audio>
 
+    <!-- Ambient Ttones -->
+    <audio class="ambient" id="ambient-one">
+        <source src="{% static "/media/audio/ambient/ambientOne.mp3" %}">
+    </audio>
+    <audio class="ambient" id="ambient-one-sampler">
+        <source src="{% static "/media/audio/ambient/ambientOneSampler.mp3" %}">
+    </audio>
+    <audio class="ambient" id="ambient-two">
+        <source src="{% static "/media/audio/ambient/ambientTwo.mp3" %}">
+    </audio>
+    <audio class="ambient" id="ambient-two-sampler">
+            <source src="{% static "/media/audio/ambient/ambientTwoSampler.mp3" %}">
+        </audio>
+    <audio class="ambient" id="ambient-three">
+        <source src="{% static "/media/audio/ambient/ambientThree.mp3" %}">
+    </audio>
+    <audio class="ambient" id="ambient-three-sampler">
+        <source src="{% static "/media/audio/ambient/ambientThreeSampler.mp3" %}">
+    </audio>
+    <audio class="ambient" id="no-ambient">
+            <source src="{% static "/media/audio/ambient/noAmbient.mp3" %}">
+    </audio>
 {% endblock %}
 
 {% block scripts %}
