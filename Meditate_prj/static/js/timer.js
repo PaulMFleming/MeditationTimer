@@ -1,9 +1,27 @@
 var counter =  moment.utc(180*1000).format('mm:ss');
+var prepCounter = moment.utc(180*1000).format('mm:ss');
 var t;
 var isTimerOn = false;
 
 var tone = document.getElementById("bell-one");;
 
+function prepCountdown() {
+    document.getElementById("prep-text").value = moment.utc(prepCounter*1000).format('mm:ss');
+    prepCounter--;
+    t = setTimeout("prepCountdown();", 1000);
+
+    if (prepCounter < 0) {
+        stopMe();
+    }
+}
+
+function startPrep() {
+    if (!isTimerOn) {
+        isTimerOn = true;
+        prepCountdown();
+    }
+    
+}
 
 function countdown() {
     document.getElementById("text").value = moment.utc(counter*1000).format('mm:ss');
@@ -85,6 +103,30 @@ function setFifteenMin() {
     document.getElementById("text").value = counterDisplay;
     return counterDisplay;
     return counter;
+}
+
+function setTenPrep() {
+    prepCounter = 10;
+    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
+    document.getElementById("prep-text").value = prepCounterDisplay;
+    return prepCounterDisplay;
+    return prepCounter;
+}
+
+function setThirtyPrep() {
+    prepCounter = 30;
+    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
+    document.getElementById("prep-text").value = prepCounterDisplay;
+    return prepCounterDisplay;
+    return prepCounter;
+}
+
+function setSixtyPrep() {
+    prepCounter = 60;
+    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
+    document.getElementById("prep-text").value = prepCounterDisplay;
+    return prepCounterDisplay;
+    return prepCounter;
 }
 
 function setBellOne() {
