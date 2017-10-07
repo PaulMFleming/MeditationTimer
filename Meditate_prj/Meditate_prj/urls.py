@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from timer import views
+from timer import views as timer_views
+from hello import views as hello_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.get_timer)
+    url(r'^$', hello_views.get_index, name='index'),
+    url(r'^timer$', timer_views.get_timer name='timer'),
 ]
