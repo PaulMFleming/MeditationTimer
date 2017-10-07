@@ -43,11 +43,14 @@ function startMe() {
 }
 
 function stopMe() {
+    ambient.pause();
     isTimerOn = false;
     clearTimeout(t);
 }
 
 function resetMe() {
+    ambient.pause();
+    ambient.currentTime = 0;
     isTimerOn = false;
     clearTimeout(t);
     counter = 0;
