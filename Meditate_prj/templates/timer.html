@@ -12,8 +12,6 @@
         <button id="sixtySec" onclick="setSixtyPrep()">1 min</button>
         <br><br>
         <input type="text" id='prep-text' value="  choose  prep time">
-        <button onclick="startPrep()">Start Prep</button>
-        <button onclick="stopMe()">Stop Prep</button>
         <br><br>
 
         <p>How long do you want to meditate for?</p>
@@ -24,15 +22,7 @@
         <button id="thirteenMin" onclick="setThirteenMin()">13 min</button>
         <button id="fifteenMin" onclick="setFifteenMin()">15 min</button>
         <br><br>
-
         <input type="text" id='text' value="  choose time">
-        <input type="button" value="Begin" onclick="startMe();">
-        <input type="button" value="Pause" onclick="stopMe();">
-        <input type="button" value="Finish Early" onclick="resetMe();">
-        <br><br>
-
-        <p>Do you want to set an intention for your meditation?</p>
-        <input type="text" id="intention" value=" set intention">
         <br><br>
 
         <p>Choose Bell Sound</p>
@@ -47,6 +37,16 @@
         <button id="ambientTwo" onclick="setAmbientTwo()">Ambient Two</button>
         <button id="ambientThree" onclick="setAmbientThree()">Ambient Three</button>
         <button id="noAmbient" onclick="setNoAmbient()">No Ambient Sound</button>    
+        <br><br>
+
+        <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()">Start</button>
+        <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
+        <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
+        <br><br>
+
+        <p>Do you want to set an intention for your meditation?</p>
+        <input type="text" id="intention" value=" set intention">
+        <br><br>
     </div>
 
     <!-- Bells -->
@@ -63,7 +63,7 @@
         <source src="{% static "/media/audio/bells/bellFour.mp3" %}">
     </audio>
 
-    <!-- Ambient Ttones -->
+    <!-- Ambient Tones -->
     <audio class="ambient" id="ambient-one">
         <source src="{% static "/media/audio/ambient/ambientOne.mp3" %}">
     </audio>

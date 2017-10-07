@@ -13,16 +13,10 @@ function prepCountdown() {
     t = setTimeout("prepCountdown();", 1000);
 
     if (prepCounter < 0) {
+        isTimerOn = false;
         stopMe();
+        startMe();
     }
-}
-
-function startPrep() {
-    if (!isTimerOn) {
-        isTimerOn = true;
-        prepCountdown();
-    }
-    
 }
 
 function countdown() {
@@ -58,6 +52,10 @@ function resetMe() {
     clearTimeout(t);
     counter = 0;
     document.getElementById("text").value = counter;
+}
+
+function playTone() {
+    tone.play();
 }
 
 function setThreeMin() {
