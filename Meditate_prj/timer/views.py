@@ -6,7 +6,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-
-
 def get_timer(request):
-    return HttpResponse('Timer goes here')
+    return render(request, 'timer.html')
