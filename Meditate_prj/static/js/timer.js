@@ -210,3 +210,7 @@ function setNoAmbient(){
     ambient.play();
     return ambient;
 }
+
+function setIntentionOne() {
+    document.getElementById("intention").value;
+}
