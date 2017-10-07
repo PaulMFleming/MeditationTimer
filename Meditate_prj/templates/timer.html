@@ -1,4 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
     <h2>Timer Page!</h2>
+    <div id="container">
+        <p>How long do you want to meditate for?</p>
+        <button id="threeMin" onclick="setThreeMin()">3 min</button>
+        <button id="fiveMin" onclick="setFiveMin()">5 min</button>
+        <button id="sevenMin" onclick="setSevenMin()">7 min</button>
+        <button id="tenMin" onclick="setTenMin()">10 min</button>
+        <button id="thirteenMin" onclick="setThirteenMin()">13 min</button>
+        <button id="fifteenMin" onclick="setFifteenMin()">15 min</button>
+        <br><br>
+        
+        
+        <input type="text" id='text' value="  choose time">
+        <br><br>
+        <input type="button" value="Begin" onclick="startMe();">
+        <input type="button" value="Pause" onclick="stopMe();">
+        <input type="button" value="Finish Early" onclick="resetMe();">
+        
+        <p>Do you want to set an intention for your meditation?</p>
+        <input type="text" id="intention" value=" set intention">
+        <p>Choose Bell Sound</p>
+        <button id="bellOne" onclick="setBellOne()">Bell One</button>
+        <button id="bellTwo" onclick="setBellTwo()">Bell Two</button>
+        <button id="bellThree" onclick="setBellThree()">Bell Three</button>
+        <button id="noBell" onclick="setNoBell()">No Bell</button>    
+    </div>
+
 {% endblock %}
