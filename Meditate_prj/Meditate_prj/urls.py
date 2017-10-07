@@ -21,5 +21,5 @@ from hello import views as hello_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', hello_views.get_index, name='index'),
-    url(r'^timer$', timer_views.get_timer name='timer'),
+    url(r'^timer$', timer_views.get_timer, name='timer'),
 ]
