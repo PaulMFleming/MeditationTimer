@@ -6,6 +6,14 @@ var isTimerOn = false;
 var tone = document.getElementById("bell-one");
 var ambient = document.getElementById("no-ambient");
 var ambientSampler = document.getElementById("no-ambient");
+var image = document.getElementById("noImage");
+
+IMAGES = {
+    "yinyang-image": "url(/static/media/images/yin-yang_stones.jpg)",
+    "om-image": "url(/static/media/images/on_red_bg.jpg)",
+    "buddha-image": "url(/static/media/images/lord-buddha.jpg)",
+    "no-image": "url(none)",
+}
 
 function prepCountdown() {
     document.getElementById("text").value = moment.utc(prepCounter*1000).format('mm:ss');
@@ -213,4 +221,12 @@ function setNoAmbient(){
 
 function setIntentionOne() {
     document.getElementById("intention").value;
+}
+
+function setImage(imageName) {
+    $(".modal-content").css('background-image', IMAGES[imageName]);
+}
+
+function noImage() {
+    $("#no-image")
 }
