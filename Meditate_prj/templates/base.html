@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="masthead">
-        <ul class="nav nav-pills pull-right">
+        <ul class="nav nav-pills pull-left">
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'timer' %}">Timer</a></li>
             <li><a href="#">Contact</a></li>
@@ -25,7 +25,7 @@
                 <li><a href="#">Log In</a></li>
 
         </ul>
-        <h1><span class="fui-settings-16 muted">Sit Spot</span></h1>
+        <h1><span class="fui-settings-16 muted ">Sit Spot</span></h1>
     </div>
     <hr>
     {% if messages %}
@@ -44,7 +44,7 @@
         {% endblock %}
     </div>
     <hr>
-    <div class="footer">
+    <div class="footer text-center">
         <p>Made By Paul Fleming using Django </p>
         <p>Meditation Timer is free and always will be.</p>
         <p>If you like the app consider buying me some tea (I don't drink coffee)</p>

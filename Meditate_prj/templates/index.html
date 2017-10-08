@@ -1,10 +1,24 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
-    <h2>Hello, Meditators!</h2>
-    <p>This is the index page</p>
-    <p>This is where we give you info about our site</p>
-    <p>You can use the timer without needing to log in, but if you create an account
-        you get access to additional features like customizing the timer
-    </p>
-    <p>We'll be adding more content soon</p>
+    <div class="container text-center">
+        <div class="jumbotron">
+          <div id="quoteDisplay"></div>
+          <br><br>
+        </div>
+        <h2>Hello, Meditators!</h2>
+        <p>This is the index page</p>
+        <p>This is where we give you info about our site</p>
+        <p>You can use the timer without needing to log in, but if you create an account
+            you get access to additional features like customizing the timer
+        </p>
+        <p>We'll be adding more content soon</p>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super}}
+        <!-- Custom script to control the quote generator -->
+        <script type="text/javascript" src="{% static "js/quote.js" %}"></script>
 {% endblock %}
