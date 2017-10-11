@@ -60,17 +60,17 @@
 
         <h2>Bell Sound</h2>
         <div class="btn-group" data-toggle="buttons">
-           <label class="btn btn-primary active" onclick="setBellOne()">
-               <input type="radio" name="options" id="bellOne" autocomplete="off"   checked> Bell One
+           <label class="btn btn-primary active" id="bellOne" onclick="setBell(this.id)">
+               <input type="radio" name="options"  autocomplete="off"   checked> Bell One
            </label>
-           <label class="btn btn-primary" onclick="setBellTwo()">
-             <input type="radio" name="options" id="bellTwo" autocomplete="off" > Bell Two
+           <label class="btn btn-primary" id="bellTwo" onclick="setBell(this.id)">
+             <input type="radio" name="options" autocomplete="off" > Bell Two
            </label>
-           <label class="btn btn-primary" onclick="setBellThree()">
-             <input type="radio" name="options" id="bellThree" autocomplete="off" > Bell Three
+           <label class="btn btn-primary" id="bellThree" onclick="setBell(this.id)">
+             <input type="radio" name="options" autocomplete="off" > Bell Three
            </label>
-           <label class="btn btn-primary" onclick="setBellFour()">
-             <input type="radio" name="options" id="bellFour" autocomplete="off" > Bell Four
+           <label class="btn btn-primary" id="bellFour" onclick="setBell(this.id)">
+             <input type="radio" name="options" autocomplete="off" > Bell Four
            </label>
         </div> 
         <br><br>

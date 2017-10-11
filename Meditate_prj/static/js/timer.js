@@ -15,7 +15,7 @@ IMAGES = {
     "no-image": "url(none)",
 }
 
-PREP_TIMER={
+PREP_TIMER = {
     "tenSec": "10",
     "thirtySec": "30",
     "sixtySec": "60",
@@ -27,6 +27,13 @@ MED_TIMER = {
     "tenMin": "600",
     "thirteenMin": "720",
     "fifteenMin": "900",
+}
+
+BELLS = {
+    "bellOne": "bell-one",
+    "bellTwo": "bell-two",
+    "bellThree": "bell-three",
+    "bellFour": "bell-four",
 }
 
 
@@ -85,41 +92,6 @@ function playTone() {
     tone.play();
 }
 
-
-
-
-
-function setBellOne() {
-    tone.pause();
-    tone.currentTime = 0;
-    tone = document.getElementById("bell-one");
-    tone.play();
-    return tone
-}
-
-function setBellTwo() {
-    tone.pause();
-    tone.currentTime = 0;
-    tone = document.getElementById("bell-two");
-    tone.play();
-    return tone
-}
-
-function setBellThree() {
-    tone.pause();
-    tone.currentTime = 0;
-    tone = document.getElementById("bell-three");
-    tone.play();
-    return tone
-}
-
-function setBellFour() {
-    tone.pause();
-    tone.currentTime = 0;
-    tone = document.getElementById("bell-four");
-    tone.play();
-    return tone
-}
 
 function setAmbientOne(){
     tone.pause();
@@ -190,9 +162,15 @@ function setPrepTime(prepTimeInSeconds) {
     console.log(prepCounterDisplay);
     document.getElementById("text").value = prepCounterDisplay;
     return prepCounterDisplay;
-    return prepCounter;
+    return prepCxounter;
 }
 
-function noImage() {
-    $("#no-image")
+function setBell(bellSound) {
+    tone.pause();
+    tone.currentTime = 0;
+    tone = document.getElementById(BELLS[bellSound]);
+    playTone();
+    return tone;
 }
+
+
