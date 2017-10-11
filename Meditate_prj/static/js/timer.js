@@ -15,6 +15,17 @@ IMAGES = {
     "no-image": "url(none)",
 }
 
+MED_TIMER = {
+    "threeMin" : "180",
+    "fiveMin" : "300",
+    "sevenMin" : "420",
+    "tenMin" : "600",
+    "thirteenMin" : "720",
+    "fifteenMin" : "900",
+}
+
+
+
 function prepCountdown() {
     document.getElementById("text").value = moment.utc(prepCounter*1000).format('mm:ss');
     prepCounter--;
@@ -141,6 +152,7 @@ function setSixtyPrep() {
     return prepCounter;
 }
 
+
 function setBellOne() {
     tone.pause();
     tone.currentTime = 0;
@@ -225,6 +237,16 @@ function setIntentionOne() {
 
 function setImage(imageName) {
     $(".modal-content").css('background-image', IMAGES[imageName]);
+}
+
+function setTime(timeInSeconds) {
+    counter = MED_TIMER[timeInSeconds];
+    counterDisplay = moment.utc(counter*1000).format('mm:ss');
+    console.log(counter);
+    console.log(counterDisplay);
+    document.getElementById("text").value = counterDisplay;
+    return counterDisplay;
+    return counter;
 }
 
 function noImage() {

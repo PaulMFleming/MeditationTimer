@@ -36,7 +36,7 @@
     width: 20%;
   }
 
-  .focus-image img {
+  img {
     filter: gray; /* IE6-9 */
     -webkit-filter: opacity(80%); /* Google Chrome, Safari 6+ & Opera 15+ */
       -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
@@ -45,7 +45,7 @@
       margin-bottom:20px;
   }
   
-  .focus-image img:hover {
+  img:hover {
     filter: none; /* IE6-9 */
     -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
    
@@ -55,6 +55,7 @@
   background-image: url(https://www.artofliving.org/sites/www.artofliving.org/files/wysiwyg_imageupload/2_27.jpg);
   background-position: center;
   background-size: cover;
+  color: #fff;
 }
 
 

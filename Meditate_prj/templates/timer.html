@@ -40,7 +40,7 @@
             <label class="btn btn-primary active" onclick="setThreeMin()">
                 <input type="radio" name="options" id="threeMin" autocomplete="off" checked>3 mins
             </label>
-            <label class="btn btn-primary" onclick="setFiveMin()">
+            <label class="btn btn-primary" onclick="setTime(this.id)">
                 <input type="radio" name="options" id="fiveMin" autocomplete="off">5 mins
             </label>
             <label class="btn btn-primary" onclick="setSevenMin()">
@@ -112,6 +112,7 @@
 
         <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Start</button>
         <br><br>
+
 
         
     </div>
