@@ -77,17 +77,17 @@
 
         <h2>Ambient Sound</h2>
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" onclick="setNoAmbient()">
-                <input type="radio" name="options" id="noAmbient" autocomplete="off"   checked> No Sound
+            <label class="btn btn-primary active" id="noAmbient" onclick="setAmbient(this.id)">
+                <input type="radio" name="options" autocomplete="off"   checked> No Sound
             </label>
-            <label class="btn btn-primary" onclick="setAmbientOne()">
-              <input type="radio" name="options" id="ambientOne" autocomplete="off" > Ambient One
+            <label class="btn btn-primary" id="ambientOne" onclick="setAmbient(this.id)">
+              <input type="radio" name="options" autocomplete="off" > Ambient One
             </label>
-            <label class="btn btn-primary" onclick="setAmbientTwo()">
-              <input type="radio" name="options" id="ambientTwo" autocomplete="off" > Ambient Two
+            <label class="btn btn-primary" id="ambientTwo" onclick="setAmbient(this.id)">
+              <input type="radio" name="options" autocomplete="off" > Ambient Two
             </label>
-            <label class="btn btn-primary" onclick="setAmbientThree()">
-              <input type="radio" name="options" id="ambientThree" autocomplete="off" > Ambient Three
+            <label class="btn btn-primary" id="ambientThree" onclick="setAmbient(this.id)">
+              <input type="radio" name="options" autocomplete="off" > Ambient Three
             </label>
         </div> 
 

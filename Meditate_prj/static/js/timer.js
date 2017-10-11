@@ -36,6 +36,19 @@ BELLS = {
     "bellFour": "bell-four",
 }
 
+AMBIENT = {
+    "ambientOne": "ambient-one",
+    "ambientTwo": "ambient-two",
+    "ambientThree": "ambient-three",
+    "noAmbient": "no-ambient",
+}
+
+AMBIENT_SAMPLER = {
+    "ambientOne": "ambient-one-sampler",
+    "ambientTwo": "ambient-two-sampler",
+    "ambientThree": "ambient-three-sampler",
+    "noAmbient": "no-ambient",
+}
 
 
 function prepCountdown() {
@@ -92,59 +105,13 @@ function playTone() {
     tone.play();
 }
 
-
-function setAmbientOne(){
-    tone.pause();
-    tone.currentTime = 0;
-    ambientSampler.pause();
-    ambientSampler.currentTime = 0;
-    ambient = document.getElementById("ambient-one");
-    ambientSampler = document.getElementById("ambient-one-sampler");
-    ambientSampler.play();
-    return ambient;
-    return ambientSampler;
-}
-
-function setAmbientTwo(){
-    tone.pause();
-    tone.currentTime = 0;
-    ambientSampler.pause();
-    ambientSampler.currentTime = 0;
-    ambient = document.getElementById("ambient-two");
-    ambientSampler = document.getElementById("ambient-two-sampler");
-    ambientSampler.play();
-    return ambient;
-    return ambientSampler;
-}
-
-function setAmbientThree(){
-    tone.pause();
-    tone.currentTime = 0;
-    ambientSampler.pause();
-    ambientSampler.currentTime = 0;
-    ambient = document.getElementById("ambient-three");
-    ambientSampler = document.getElementById("ambient-three-sampler");
-    ambientSampler.play();
-    return ambient;
-    return ambientSampler;
-}
-
-function setNoAmbient(){
-    tone.pause();
-    tone.currentTime = 0;
-    ambient.pause();
-    ambient.currentTime = 0;
-    ambient = document.getElementById("no-ambient");
-    ambient.play();
-    return ambient;
-}
-
-function setIntentionOne() {
-    document.getElementById("intention").value;
-}
-
-function setImage(imageName) {
-    $(".modal-content").css('background-image', IMAGES[imageName]);
+function setPrepTime(prepTimeInSeconds) {
+    prepCounter = parseInt(PREP_TIMER[prepTimeInSeconds]);
+    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
+    console.log(prepCounterDisplay);
+    document.getElementById("text").value = prepCounterDisplay;
+    return prepCounterDisplay;
+    return prepCounter;
 }
 
 function setTime(timeInSeconds) {
@@ -156,21 +123,28 @@ function setTime(timeInSeconds) {
     return counter;
 }
 
-function setPrepTime(prepTimeInSeconds) {
-    prepCounter = parseInt(PREP_TIMER[prepTimeInSeconds]);
-    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
-    console.log(prepCounterDisplay);
-    document.getElementById("text").value = prepCounterDisplay;
-    return prepCounterDisplay;
-    return prepCxounter;
-}
-
 function setBell(bellSound) {
     tone.pause();
     tone.currentTime = 0;
     tone = document.getElementById(BELLS[bellSound]);
     playTone();
     return tone;
+}
+
+function setAmbient(ambientSound) {
+    tone.pause();
+    tone.currentTime = 0;
+    ambientSampler.pause();
+    ambientSampler.currentTime = 0;
+    ambient = document.getElementById(AMBIENT[ambientSound]);
+    ambientSampler = document.getElementById(AMBIENT_SAMPLER[ambientSound]);
+    ambientSampler.play();
+    return ambient;
+    return ambientSampler;
+}
+
+function setImage(imageName) {
+    $(".modal-content").css('background-image', IMAGES[imageName]);
 }
 
 
