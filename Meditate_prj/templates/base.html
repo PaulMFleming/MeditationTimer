@@ -19,11 +19,14 @@
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'timer' %}">Timer</a></li>
             <li><a href="#">Contact</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+            {% else %}
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Log In</a></li>
 
-                <li><a href="#">Log Out</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Log In</a></li>
-
+            {% endif %}
         </ul>
         <h1><span class="fui-settings-16 muted ">Sit Spot</span></h1>
     </div>
