@@ -23,14 +23,14 @@
 
         <h2>Prep Time</h2>
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" onclick="setTenPrep()">
-                <input type="radio" name="options" id="tenSec" autocomplete="off" checked>10 sec
+            <label class="btn btn-primary active" id="tenSec" onclick="setPrepTime(this.id)">
+                <input type="radio" name="options"  autocomplete="off" checked>10 sec
             </label>
-            <label class="btn btn-primary" onclick="setThirtyPrep()">
-                <input type="radio" name="options" id="thirtySec" autocomplete="off">30 sec
+            <label class="btn btn-primary" id="thirtySec" onclick="setPrepTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">30 sec
             </label>
-            <label class="btn btn-primary" onclick="setSixtyPrep()">
-                <input type="radio" name="options" id="sixtySec" autocomplete="off">60 sec
+            <label class="btn btn-primary" id="sixtySec" onclick="setPrepTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">60 sec
             </label>
         </div>
         <br><br>

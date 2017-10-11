@@ -15,13 +15,18 @@ IMAGES = {
     "no-image": "url(none)",
 }
 
+PREP_TIMER={
+    "tenSec": "10",
+    "thirtySec": "30",
+    "sixtySec": "60",
+}
 MED_TIMER = {
-    "threeMin" : "180",
-    "fiveMin" : "300",
-    "sevenMin" : "420",
-    "tenMin" : "600",
-    "thirteenMin" : "720",
-    "fifteenMin" : "900",
+    "threeMin": "180",
+    "fiveMin": "300",
+    "sevenMin": "420",
+    "tenMin": "600",
+    "thirteenMin": "720",
+    "fifteenMin": "900",
 }
 
 
@@ -73,84 +78,15 @@ function resetMe() {
     isTimerOn = false;
     clearTimeout(t);
     counter = 0;
-    document.getElementById("text").value = counter;
+    document.getElementById("text").value = moment.utc(counter*1000).format('mm:ss');
 }
 
 function playTone() {
     tone.play();
 }
 
-function setThreeMin() {
-    counter = 180;
-    counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    document.getElementById("text").value = counterDisplay;
-    return counterDisplay;
-    return counter;
-}
 
-function setFiveMin() {
-    counter = 300;
-    counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    document.getElementById("text").value = counterDisplay;
-    return counterDisplay;
-    return counter;
-}
 
-function setSevenMin() {
-    counter = 420;
-    counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    document.getElementById("text").value = counterDisplay;
-    return counterDisplay;
-    return counter;
-}
-
-function setTenMin() {
-    counter = 600;
-    counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    document.getElementById("text").value = counterDisplay;
-    return counterDisplay;
-    return counter;
-}
-
-function setThirteenMin() {
-    counter = 780;
-    counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    document.getElementById("text").value = counterDisplay;
-    return counterDisplay;
-    return counter;
-}
-
-function setFifteenMin() {
-    counter = 900;
-    counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    document.getElementById("text").value = counterDisplay;
-    return counterDisplay;
-    return counter;
-}
-
-function setTenPrep() {
-    prepCounter = 10;
-    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
-    document.getElementById("prep-text").value = prepCounterDisplay;
-    return prepCounterDisplay;
-    return prepCounter;
-}
-
-function setThirtyPrep() {
-    prepCounter = 30;
-    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
-    document.getElementById("prep-text").value = prepCounterDisplay;
-    return prepCounterDisplay;
-    return prepCounter;
-}
-
-function setSixtyPrep() {
-    prepCounter = 60;
-    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
-    document.getElementById("prep-text").value = prepCounterDisplay;
-    return prepCounterDisplay;
-    return prepCounter;
-}
 
 
 function setBellOne() {
@@ -242,11 +178,19 @@ function setImage(imageName) {
 function setTime(timeInSeconds) {
     counter = parseInt(MED_TIMER[timeInSeconds]);
     counterDisplay = moment.utc(counter*1000).format('mm:ss');
-    console.log(counter);
     console.log(counterDisplay);
     document.getElementById("text").value = counterDisplay;
     return counterDisplay;
     return counter;
+}
+
+function setPrepTime(prepTimeInSeconds) {
+    prepCounter = parseInt(PREP_TIMER[prepTimeInSeconds]);
+    prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
+    console.log(prepCounterDisplay);
+    document.getElementById("text").value = prepCounterDisplay;
+    return prepCounterDisplay;
+    return prepCounter;
 }
 
 function noImage() {
