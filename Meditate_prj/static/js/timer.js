@@ -240,7 +240,7 @@ function setImage(imageName) {
 }
 
 function setTime(timeInSeconds) {
-    counter = MED_TIMER[timeInSeconds];
+    counter = parseInt(MED_TIMER[timeInSeconds]);
     counterDisplay = moment.utc(counter*1000).format('mm:ss');
     console.log(counter);
     console.log(counterDisplay);

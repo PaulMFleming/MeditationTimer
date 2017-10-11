@@ -37,23 +37,23 @@
         
         <h2>Meditation Time</h2>
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" onclick="setThreeMin()">
-                <input type="radio" name="options" id="threeMin" autocomplete="off" checked>3 mins
+            <label class="btn btn-primary active" id="threeMin" onclick="setTime(this.id)">
+                <input type="radio" name="options" autocomplete="off" checked>3 mins
             </label>
-            <label class="btn btn-primary" onclick="setTime(this.id)">
-                <input type="radio" name="options" id="fiveMin" autocomplete="off">5 mins
+            <label class="btn btn-primary" id="fiveMin" onclick="setTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">5 mins
             </label>
-            <label class="btn btn-primary" onclick="setSevenMin()">
-                <input type="radio" name="options" id="sevenMin" autocomplete="off">7 mins
+            <label class="btn btn-primary" id="sevenMin" onclick="setTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">7 mins
             </label>
-            <label class="btn btn-primary" onclick="setTenMin()">
-                <input type="radio" name="options" id="tenMin" autocomplete="off">10 mins
+            <label class="btn btn-primary"id="tenMin"  onclick="setTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">10 mins
             </label>
-            <label class="btn btn-primary" onclick="setThirteenMin()">
-                <input type="radio" name="options" id="thirteenMin" autocomplete="off">13 mins
+            <label class="btn btn-primary" id="thirteenMin" onclick="setTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">13 mins
             </label>
-            <label class="btn btn-primary" onclick="setFifteenMin()">
-                <input type="radio" name="options" id="fifteenMin" autocomplete="off">15 mins
+            <label class="btn btn-primary" id="fifteenMin" onclick="setTime(this.id)">
+                <input type="radio" name="options" autocomplete="off">15 mins
             </label>    
         </div>
         <br><br>
