@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
-    url(r'^diaryentries/$', diary_views.entry_list, name='entrylist'),
+    url(r'^diaryentries/$', diary_views.entry_list, name='diaryentries'),
     url(r'^diaryentries/(?P<id>\d+)/$', diary_views.entry_detail, name='entrydetail'),
     url(r'^diary/new/$', diary_views.new_entry, name='new_entry'),
 ]
