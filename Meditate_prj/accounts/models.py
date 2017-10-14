@@ -28,10 +28,12 @@ class AccountUserManager(UserManager):
 
     def __create_superuser(self, username, email, password,
                     is_staff, is_superuser, **extra_fields):
-            return self._create_user(username=username, email=email, 
-                                password=password, is_staff=True,
-                                is_superuser=True,
-                                 **extra_fields)
+
+        superuser = self.model(username=username, email=email, 
+                            password=password, is_staff=True,
+                            is_superuser=True, **extra_fields)
+
+        return superuser
 
 class User(AbstractUser):
     # abstracted class here so we can customize it later

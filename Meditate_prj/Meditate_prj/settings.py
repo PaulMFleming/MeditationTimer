@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'timer',
     'accounts',
     'django_forms_bootstrap',
+    'diary',
 ]
 
 MIDDLEWARE = [

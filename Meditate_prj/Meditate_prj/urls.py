@@ -18,6 +18,7 @@ from django.contrib import admin
 from timer import views as timer_views
 from hello import views as hello_views
 from accounts import views as accounts_views
+from diary import views as diary_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,4 +28,6 @@ urlpatterns = [
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
+    url(r'^logform/$', diary_views.logform, name='logform'),
+
 ]
