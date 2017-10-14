@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^logform/$', diary_views.logform, name='logform'),
     url(r'^diaryentries/$', diary_views.entry_list, name='entrylist'),
+    url(r'^diaryentries/(?P<id>\d+)/$', diary_views.entry_detail, name='entrydetail'),
 
 ]
