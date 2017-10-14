@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from .forms import DiaryEntryForm
 from .models import DiaryEntry
@@ -15,7 +16,7 @@ def entry_list(request):
     Return all the diary entries and 
     render them to the diaryentries.html template
     """
-    entries = DiaryEntry.objects.all()
+    entries = DiaryEntry.objects.filter(author=request.user)
     context = {'entries': entries}
     return render(request, "diaryentries.html", context)
 

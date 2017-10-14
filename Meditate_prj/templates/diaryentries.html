@@ -3,7 +3,7 @@
 {% block content %}
     <h1>My Meditation Diary</h1>
     <hr>
-   {% for entry in entries %}
+    {% for entry in entries %}
        <div>
            <div>
                <h1>{{ entry.created_date }}</h1>
@@ -13,5 +13,5 @@
            <p>{{ entry.intention|linebreaks }}</p>
            <p><button class="btn btn-default" onclick="location.href={{ entry.id }}">Read More</button></p>
        </div>
-   {% endfor %}
+    {% endfor %}
 {% endblock %}
