@@ -1,22 +1,14 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .forms import LogForm
+from .forms import DiaryEntryForm
 from .models import DiaryEntry
 
 # Create your views here.
 
 # this view is a test & isn't working yet
-def logform(request):
-    if request.method == 'POST':
-        form = LogForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-    else:
-        form = LogForm()
-    return Http('logform.html', {'form':form},)
 
 def entry_list(request):
     """
@@ -37,3 +29,17 @@ def entry_detail(request, id):
     entry = get_object_or_404(DiaryEntry, pk=id)
     context = {'entry': entry}
     return render(request, "entrydetail.html", context)
+
+def new_entry(request):
+    if request.method == "POST":
+        form = DiaryEntryForm(request.POST)
+        if form.is_valid():
+            entry = form.save(commit=False)
+            entry.author = request.user
+            entry.created_date = timezone.now()
+            entry.save()
+            return redirect(entry_detail, entry.pk)
+    else:
+        form = DiaryEntryForm()
+        context = {'form': form}
+        return render(request, 'diaryentryform.html', context)
