@@ -2,7 +2,9 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from django.utils import timezone
 from .forms import LogForm
+from .models import DiaryEntry
 
 # Create your views here.
 
@@ -16,3 +18,7 @@ def logform(request):
         form = LogForm()
     return Http('logform.html', {'form':form},)
 
+def entry_list(request):
+    entries = DiaryEntry.objects.all()
+    context = {'entries': entries}
+    return render(request, "diaryentries.html", context)

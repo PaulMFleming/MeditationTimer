@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^logform/$', diary_views.logform, name='logform'),
+    url(r'^diaryentries/$', diary_views.entry_list, name='entrylist'),
 
 ]
