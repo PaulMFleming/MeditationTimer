@@ -23,7 +23,9 @@ from diary import views as diary_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', hello_views.get_index, name='index'),
+    url(r'^guide/$', hello_views.get_guide, name='guide'),
     url(r'^timer/$', timer_views.get_timer, name='timer'),
+    url(r'^mytimer/$', timer_views.get_mytimer, name='mytimer'),
     url(r'^register/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),

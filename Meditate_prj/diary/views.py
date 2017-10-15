@@ -13,7 +13,7 @@ from .models import DiaryEntry
 
 def entry_list(request):
     """
-    Return all the diary entries and 
+    Return all the diary entries owner by logged in user and 
     render them to the diaryentries.html template
     """
     entries = DiaryEntry.objects.filter(author=request.user)

@@ -83,6 +83,7 @@ function countdown() {
     if (counter < 0) {
       stopMe();
       tone.play();
+      showDiaryEntryForm();
     }
 }
 
@@ -147,4 +148,7 @@ function setImage(imageName) {
     $(".modal-content").css('background-image', IMAGES[imageName]);
 }
 
+function showDiaryEntryForm() {
+    
+}
 

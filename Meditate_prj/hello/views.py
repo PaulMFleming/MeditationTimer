@@ -8,3 +8,6 @@ from django.http import HttpResponse
 
 def get_index(request):
     return render(request, 'index.html')
+
+def get_guide(request):
+    return render(request, 'guide.html')
