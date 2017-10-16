@@ -15,7 +15,7 @@
 {% block myimagefiles %}
     {% for image in myimage %}
         <div class="col-md-4 col-sm-4 col-xs-3">
-            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="{{ myimage }}" />
+            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="{% static '/media/myimages/{{ UploadImage.myimage }}" />
         </div>
     {% endfor %}
 {% endblock %}

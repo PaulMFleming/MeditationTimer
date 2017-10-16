@@ -19,6 +19,8 @@ from timer import views as timer_views
 from hello import views as hello_views
 from accounts import views as accounts_views
 from diary import views as diary_views
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,4 +35,5 @@ urlpatterns = [
     url(r'^diaryentries/$', diary_views.entry_list, name='diaryentries'),
     url(r'^diaryentries/(?P<id>\d+)/$', diary_views.entry_detail, name='entrydetail'),
     url(r'^diary/new/$', diary_views.new_entry, name='new_entry'),
+    url(r'^static/media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 ]
