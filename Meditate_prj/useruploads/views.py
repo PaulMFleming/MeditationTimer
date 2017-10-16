@@ -11,17 +11,15 @@ from .models import UploadImage
 def ImageCreate(request):
     form = ImageForm(request.POST or None, request.FILES or None)
     if form.is_valid():
-        instance = form.save()
-        instance.save()
-        return HttpResponseRedirect(instance.get_absolute_url())
+        form.save()
+        return HttpResponseRedirect(form.get_absolute_url())
     context = { "form": form }
     return render(request, "myimages.html", context)
 
 def AudioCreate(request):
     form = AudioForm(request.POST or None, request.FILES or None)
     if form.is_valid():
-        instance = form.save()
-        instance.save()
-        return HttpResponseRedirect(instance.get_absolute_url())
+        form.save()
+        return HttpResponseRedirect(form.get_absolute_url())
     context = { "form": form }
     return render(request, "mysounds.html", context)
