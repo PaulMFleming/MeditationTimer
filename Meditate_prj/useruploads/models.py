@@ -11,5 +11,5 @@ class UploadImage(models.Model):
     Define how the user will upload images
     """
     author = models.ForeignKey(settings.AUTH_USER_MODEL) # link author to the registered user
-    myimage = models.FileField(upload_to='myimages/')
+    myimage = models.ImageField(upload_to='myimages/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
