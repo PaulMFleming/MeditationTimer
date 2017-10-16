@@ -89,6 +89,8 @@
             <label class="btn btn-primary" id="ambientThree" onclick="setAmbient(this.id)">
               <input type="radio" name="options" autocomplete="off" > Ambient Three
             </label>
+            {% block myaudiofiles %}
+            {% endblock %}
         </div> 
 
         <h2>Focus Image</h2>
@@ -102,6 +104,8 @@
             <div class="col-md-4 col-sm-4 col-xs-3">
                 <img class="img-responsive focus-image" id="buddha-image" onclick="setImage(this.id)" src="{% static "/media/images/lord-buddha.jpg" %}" />
             </div>
+            {% block myimagefiles %}
+            {% endblock %}
         </div>
         <div class="checkbox">
             <label><input type="checkbox" value="" id="no-image" onclick="setImage(this.id)">No image</label>

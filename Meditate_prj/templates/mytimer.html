@@ -1,184 +1,24 @@
-{% extends 'base.html' %}
+{% extends 'timer.html' %}
 {% load staticfiles %}
 
 
-{% block content %}
 
-    <div class="container text-center">
-
-        <h1>My Timer</h1>
-        <hr>
-        
-        <h2>Do you want to set an intention for your meditation?</h2>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Examples
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> I dedicate my meditation to calming my mind</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I decdicate my meditation to reducing stress in my life </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to someone in need </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to all the sick people in the world </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to improving our environment </a></li>
-            </ul>
-        </div>
-        <input type="text" id="intention" value=" set intention">
-        <br><br>
-
-        <h2>Prep Time</h2>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" id="tenSec" onclick="setPrepTime(this.id)">
-                <input type="radio" name="options"  autocomplete="off" checked>10 sec
-            </label>
-            <label class="btn btn-primary" id="thirtySec" onclick="setPrepTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">30 sec
-            </label>
-            <label class="btn btn-primary" id="sixtySec" onclick="setPrepTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">60 sec
-            </label>
-        </div>
-        <br><br>
-        
-        <h2>Meditation Time</h2>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" id="threeMin" onclick="setTime(this.id)">
-                <input type="radio" name="options" autocomplete="off" checked>3 mins
-            </label>
-            <label class="btn btn-primary" id="fiveMin" onclick="setTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">5 mins
-            </label>
-            <label class="btn btn-primary" id="sevenMin" onclick="setTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">7 mins
-            </label>
-            <label class="btn btn-primary"id="tenMin"  onclick="setTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">10 mins
-            </label>
-            <label class="btn btn-primary" id="thirteenMin" onclick="setTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">13 mins
-            </label>
-            <label class="btn btn-primary" id="fifteenMin" onclick="setTime(this.id)">
-                <input type="radio" name="options" autocomplete="off">15 mins
-            </label>    
-        </div>
-        <br><br>
-
-        <h2>Bell Sound</h2>
-        <div class="btn-group" data-toggle="buttons">
-           <label class="btn btn-primary active" id="bellOne" onclick="setBell(this.id)">
-               <input type="radio" name="options"  autocomplete="off"   checked> Bell One
-           </label>
-           <label class="btn btn-primary" id="bellTwo" onclick="setBell(this.id)">
-             <input type="radio" name="options" autocomplete="off" > Bell Two
-           </label>
-           <label class="btn btn-primary" id="bellThree" onclick="setBell(this.id)">
-             <input type="radio" name="options" autocomplete="off" > Bell Three
-           </label>
-           <label class="btn btn-primary" id="bellFour" onclick="setBell(this.id)">
-             <input type="radio" name="options" autocomplete="off" > Bell Four
-           </label>
-        </div> 
-        <br><br>
-
-        <h2>Ambient Sound</h2>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" id="noAmbient" onclick="setAmbient(this.id)">
-                <input type="radio" name="options" autocomplete="off"   checked> No Sound
-            </label>
-            <label class="btn btn-primary" id="ambientOne" onclick="setAmbient(this.id)">
-              <input type="radio" name="options" autocomplete="off" > Ambient One
-            </label>
-            <label class="btn btn-primary" id="ambientTwo" onclick="setAmbient(this.id)">
-              <input type="radio" name="options" autocomplete="off" > Ambient Two
-            </label>
-            <label class="btn btn-primary" id="ambientThree" onclick="setAmbient(this.id)">
-              <input type="radio" name="options" autocomplete="off" > Ambient Three
-            </label>
-        </div> 
-
-        <h2>Focus Image</h2>
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-3">
-                <img class="img-responsive focus-image" id="yinyang-image" onclick="setImage(this.id)" src="{% static "/media/images/yin-yang_stones.jpg" %}" />
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-3">
-                <img class="img-responsive focus-image" id="om-image" onclick="setImage(this.id)" src="{% static "/media/images/on_red_bg.jpg" %}" />
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-3">
-                <img class="img-responsive focus-image" id="buddha-image" onclick="setImage(this.id)" src="{% static "/media/images/lord-buddha.jpg" %}" />
-            </div>
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" value="" id="no-image" onclick="setImage(this.id)">No image</label>
-        </div>
-
-        <br><br>
-
-
-        <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Start</button>
-        <br><br>
-
-
-        
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-lg">    
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Meditation Timer</h4>
-            </div>
-            <div class="modal-body">
-                <input type="text" id='text' value="  choose time">
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
-                <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>  
-    </div>
-
-    <!-- Bells -->
-    <audio class="bells" id="bell-one">
-        <source src="{% static "/media/audio/bells/bellOne.mp3" %}">
-    </audio>
-    <audio class="bells" id="bell-two">
-        <source src="{% static "/media/audio/bells/bellTwo.mp3" %}">
-    </audio>
-    <audio class="bells" id="bell-three">
-        <source src="{% static "/media/audio/bells/bellThree.mp3" %}">
-    </audio>
-    <audio class="bells" id="bell-four">
-        <source src="{% static "/media/audio/bells/bellFour.mp3" %}">
-    </audio>
-
-    <!-- Ambient Tones -->
-    <audio class="ambient" id="ambient-one">
-        <source src="{% static "/media/audio/ambient/ambientOne.mp3" %}">
-    </audio>
-    <audio class="ambient" id="ambient-one-sampler">
-        <source src="{% static "/media/audio/ambient/ambientOneSampler.mp3" %}">
-    </audio>
-    <audio class="ambient" id="ambient-two">
-        <source src="{% static "/media/audio/ambient/ambientTwo.mp3" %}">
-    </audio>
-    <audio class="ambient" id="ambient-two-sampler">
-            <source src="{% static "/media/audio/ambient/ambientTwoSampler.mp3" %}">
-        </audio>
-    <audio class="ambient" id="ambient-three">
-        <source src="{% static "/media/audio/ambient/ambientThree.mp3" %}">
-    </audio>
-    <audio class="ambient" id="ambient-three-sampler">
-        <source src="{% static "/media/audio/ambient/ambientThreeSampler.mp3" %}">
-    </audio>
-    <audio class="ambient" id="no-ambient">
-            <source src="{% static "/media/audio/ambient/noAmbient.mp3" %}">
-    </audio>
+{% block myaudiofiles %}
+    {% for audio in myaudio %}
+        <label class="btn btn-primary" onclick="setAmbient(this.id)">
+            <input type="radio" name="options" autocomplete="off" > {{ myaudio.name }}
+        </label>
+  {% endfor %}
 {% endblock %}
-
 {% block scripts %}
+
+{% block myimagefiles %}
+    {% for image in myimage %}
+        <div class="col-md-4 col-sm-4 col-xs-3">
+            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="{{ myimage }}" />
+        </div>
+    {% endfor %}
+{% endblock %}
     {{ block.super}}
     <!-- Add Moment.js for easier time formatting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
