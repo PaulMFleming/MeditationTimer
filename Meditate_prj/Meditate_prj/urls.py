@@ -20,10 +20,11 @@ from .settings import MEDIA_ROOT
 from timer import views as timer_views
 from hello import views as hello_views
 from accounts import views as accounts_views
+from useruploads import views as useruploads_views
 from diary import views as diary_views
 from django.conf import settings
 from django.conf.urls.static import static
-from useruploads import views as useruploads_views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,7 +33,9 @@ urlpatterns = [
     url(r'^timer/$', timer_views.get_timer, name='timer'),
     url(r'^mytimer/$', timer_views.get_mytimer, name='mytimer'),
     url(r'^register/$', accounts_views.register, name='register'),
-    url(r'^profile/$', useruploads_views.ImageCreate, name='profile'),
+    url(r'^profile/$', accounts_views.profile, name='profile'),
+    url(r'^mysounds/$', useruploads_views.AudioCreate, name='mysounds'),
+    url(r'^myimages/$', useruploads_views.ImageCreate, name='myimages'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^diaryentries/$', diary_views.entry_list, name='diaryentries'),

@@ -4,15 +4,5 @@
     <h2>Success!</h2>
     <p>You are logged in as {{ user.email }} </p>
     <hr>
-    <h3>My Sounds</h3>
-    <p>Upload and store your own audio files to customize your timer with.</p>
-    <button>Upload</button>
-    <hr>
-    <h3>My Images</h3>
-    <p>Upload and store your own images to custmize your timer.</p>
-    <form method='POST' action="" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn btn-default" value="Upload" />
-    </form>
+    <h2>You last meditated "x" days ago</h2>
 {% endblock %}

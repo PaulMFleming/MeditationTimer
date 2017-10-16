@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h3>My Sounds</h3>
+    <p>Upload and store your own sounds to customize your timer.</p>
+    <form method='POST' action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-default" value="Upload" />
+    </form>
+{% endblock %}
