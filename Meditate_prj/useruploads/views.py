@@ -9,17 +9,21 @@ from .models import UploadImage
 # Create your views here.
 
 def ImageCreate(request):
-    form = ImageForm(request.POST or None, request.FILES or None)
-    if form.is_valid():
-        form.save()
-        return HttpResponseRedirect(form.get_absolute_url())
-    context = { "form": form }
-    return render(request, "myimages.html", context)
+    if request.method == 'POST':
+        form = ImageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(form.get_absolute_url())
+    else:
+        form = ImageForm()
+    return render(request, "myimages.html", {'form': form})
 
 def AudioCreate(request):
-    form = AudioForm(request.POST or None, request.FILES or None)
-    if form.is_valid():
-        form.save()
-        return HttpResponseRedirect(form.get_absolute_url())
-    context = { "form": form }
-    return render(request, "mysounds.html", context)
+    if request.method == 'POST':
+        form = AudioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(form.get_absolute_url())
+    else:
+        form = AudioForm()
+    return render(request, "mysounds.html", {'form': form})
