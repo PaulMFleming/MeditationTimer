@@ -5,6 +5,8 @@
     {% load bootstrap_tags %}
     <h3>My Sounds</h3>
     <p>Upload and store your own sounds to customize your timer.</p>
+    <hr>
+    
     <form method='POST' action="" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form | as_bootstrap }}
