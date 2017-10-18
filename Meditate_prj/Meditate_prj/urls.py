@@ -13,10 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.static import serve
-from .settings import MEDIA_ROOT
+#from .settings import MEDIA_ROOT
 from timer import views as timer_views
 from hello import views as hello_views
 from accounts import views as accounts_views
@@ -26,12 +26,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', hello_views.get_index, name='index'),
     url(r'^guide/$', hello_views.get_guide, name='guide'),
     url(r'^timer/$', timer_views.get_timer, name='timer'),
-    url(r'^mytimer/$', timer_views.get_mytimer, name='mytimer'),
+    url(r'^mytimer/$', useruploads_views.get_mytimer, name='mytimer'),
     url(r'^register/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^mysounds/$', useruploads_views.AudioCreate, name='mysounds'),
@@ -41,9 +42,15 @@ urlpatterns = [
     url(r'^diaryentries/$', diary_views.entry_list, name='diaryentries'),
     url(r'^diaryentries/(?P<id>\d+)/$', diary_views.entry_detail, name='entrydetail'),
     url(r'^diary/new/$', diary_views.new_entry, name='new_entry'),
-    url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+   # url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_}),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

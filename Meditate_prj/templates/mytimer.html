@@ -1,5 +1,6 @@
 {% extends 'timer.html' %}
-{% load staticfiles %}
+{% load static %}
+
 
 
 
@@ -10,20 +11,12 @@
         </label>
   {% endfor %}
 {% endblock %}
-{% block scripts %}
 
 {% block myimagefiles %}
-    {% for image in myimage %}
-        
+    {% for image in myimages %}
         <div class="col-md-4 col-sm-4 col-xs-3">
-            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="//media/{{ UploadImage.myimage }}" />
+            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="/media/{{ image.myimage }}" />
         </div>
     {% endfor %}
 {% endblock %}
-    {{ block.super}}
-    <!-- Add Moment.js for easier time formatting -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <!-- Custom script to control the timer -->
 
-    <script type="text/javascript" src="{% static "js/timer.js" %}"></script>
-{% endblock %}
