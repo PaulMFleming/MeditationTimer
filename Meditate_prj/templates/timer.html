@@ -4,22 +4,10 @@
 
 {% block content %}
 
-    <div class="container text-center">
+    <div class="container">
 
-        <h2>Do you want to set an intention for your meditation?</h2>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Examples
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> I dedicate my meditation to calming my mind</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I decdicate my meditation to reducing stress in my life </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to someone in need </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to all the sick people in the world </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to improving our environment </a></li>
-            </ul>
-        </div>
-        <input type="text" id="intention" value=" set intention">
-        <br><br>
+        {% block intentionblock %}
+        {% endblock %}
 
         <h2>Prep Time</h2>
         <div class="btn-group" data-toggle="buttons">
