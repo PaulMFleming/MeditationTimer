@@ -160,8 +160,10 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 STATICFILES_LOCATION = 'static'
 
-MEDIAFILES_LOCATION = 'media'
+MEDIAFILES_LOCATION = AWS_S3_CUSTOM_DOMAIN + 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# In order to work with S3 this needs to be an absolute url to the media files
+# on the S3 server, hence the 'https://' 
+MEDIA_URL = 'https://' + AWS_S3_CUSTOM_DOMAIN + '/media/'

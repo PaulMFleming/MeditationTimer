@@ -34,7 +34,7 @@
             <div class="modal-footer">
                 <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
                 <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
-                <a href="{% url 'new_entry' %}"><button class="btn btn-primary hide-buttons hidden">Open Diary</button></a>
+                <a href="{% url 'new_entry' %}"><button class="btn btn-primary hide-buttons hidden">Write in your diary</button></a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>  
@@ -54,7 +54,7 @@
 {% block myimagefiles %}
     {% for image in myimages %}
         <div class="col-md-4 col-sm-4 col-xs-3">
-            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="/media/{{ image.myimage }}" />
+            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="{{ MEDIA_URL }}{{ image.myimage }}" />
         </div>
     {% endfor %}
 {% endblock %}

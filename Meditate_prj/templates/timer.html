@@ -95,15 +95,14 @@
         </div>
         {% block myimagefiles %}
         {% endblock %}
-        <div class="checkbox">
-            <label><input type="checkbox" value="" id="no-image" onclick="setImage(this.id)">No image</label>
+        <div class="row">
+            <div class="checkbox">
+                <label><input type="checkbox" value="" id="no-image" onclick="setImage(this.id)">No image</label>
+            </div>
+            <br><br>
+            <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Start</button>
+            <br><br>
         </div>
-
-        <br><br>
-
-
-        <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Start</button>
-        <br><br>
 
 
         
