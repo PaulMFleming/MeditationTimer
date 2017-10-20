@@ -11,7 +11,7 @@ from .models import UploadImage
 
 def ImageCreate(request):
     if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES['myimage'])
+        form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             image = form.save(commit=False)
             image.author = request.user
