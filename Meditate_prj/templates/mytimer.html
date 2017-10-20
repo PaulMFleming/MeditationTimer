@@ -2,21 +2,45 @@
 {% load static %}
 
 {% block intentionblock %}
-    <h2>Do you want to set an intention for your meditation?</h2>
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Examples
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> I dedicate my meditation to calming my mind</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I decdicate my meditation to reducing stress in my life </a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to someone in need </a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to all the sick people in the world </a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">  I dedicate my meditation to improving our environment </a></li>
-        </ul>
-    </div>
-    <input type="text" id="intention" value=" set intention">
-    <br><br>
+    <h2>Set an intention for your meditation</h2>
+    <form action="">
+        <select name="cars">
+            <option></option>
+            <option>I dedicate my meditation to calming my mind</option>
+            <option>I decdicate my meditation to reducing stress in my life</option>
+            <option>I dedicate my meditation to someone in need</option>
+            <option>I dedicate my meditation to all the sick people in the world</option>
+            <option>I dedicate my meditation to improving our environment</option>
+        </select>
+        <input type="submit" value="Submit">
+        <h4>Or write your own</h4>
+        <input type="text" id="intention-text-box">
+    </form>
 {% endblock %}
+
+{% block timermodal %}
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Meditation Timer</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" id='text' value="  choose time">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" id="pauseButton" onclick="stopMe()">Pause</button>
+                <button class="btn btn-danger" id="resetButton" onclick="resetMe()">Finish Early</button>
+                <a href="{% url 'new_entry' %}"><button class="btn btn-primary hide-buttons hidden">Open Diary</button></a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>  
+    </div>
+{% endblock %}
+
 
 
 {% block myaudiofiles %}
