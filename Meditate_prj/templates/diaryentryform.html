@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% load bootstrap_tags %}
-    <h1>New Diary Entry</h1>
+    <h1>How Do You Feel?</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form | as_bootstrap }}

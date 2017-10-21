@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.utils import timezone
 from .forms import DiaryEntryForm
 from .models import DiaryEntry
@@ -39,8 +40,11 @@ def new_entry(request):
             entry.author = request.user
             entry.created_date = timezone.now()
             entry.save()
+            messages.success(request, "Entry created successfully")
             return redirect(entry_detail, entry.pk)
+        else:
+            messages.error(request, "There was an error saving your entry")            
+            return render(request, 'diaryentryform.html', {'form': form})
     else:
         form = DiaryEntryForm()
-        context = {'form': form}
-        return render(request, 'diaryentryform.html', context)
+        return render(request, 'diaryentryform.html', {'form': form})
