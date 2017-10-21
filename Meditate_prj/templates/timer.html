@@ -51,12 +51,8 @@
            <label class="btn btn-primary" id="bellTwo" onclick="setBell(this.id)">
              <input type="radio" name="options" autocomplete="off" > Bell Two
            </label>
-           <label class="btn btn-primary" id="bellThree" onclick="setBell(this.id)">
-             <input type="radio" name="options" autocomplete="off" > Bell Three
-           </label>
-           <label class="btn btn-primary" id="bellFour" onclick="setBell(this.id)">
-             <input type="radio" name="options" autocomplete="off" > Bell Four
-           </label>
+           {% block extrabellfiles %}
+           {% endblock %}
         </div> 
         <br><br>
 
@@ -71,10 +67,7 @@
             <label class="btn btn-primary" id="ambientTwo" onclick="setAmbient(this.id)">
               <input type="radio" name="options" autocomplete="off" > Ambient Two
             </label>
-            <label class="btn btn-primary" id="ambientThree" onclick="setAmbient(this.id)">
-              <input type="radio" name="options" autocomplete="off" > Ambient Three
-            </label>
-            {% block myaudiofiles %}
+            {% block extraambientfiles %}
             {% endblock %}
         </div> 
 
@@ -86,9 +79,8 @@
             <div class="col-md-4 col-sm-4 col-xs-3">
                 <img class="img-responsive focus-image" id="om-image" onclick="setImage(this.id)" src="{% static "media/images/on_red_bg.jpg" %}" />
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-3">
-                <img class="img-responsive focus-image" id="buddha-image" onclick="setImage(this.id)" src="{% static "media/images/lord-buddha.jpg" %}" />
-            </div>
+            {% block extraimagefiles %}
+            {% endblock %}
         </div>
         <div class="row">
             {% block myimagefiles %}

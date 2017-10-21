@@ -24,14 +24,27 @@
     </div>
 {% endblock %}
 
+{% block extrabellfiles %}
+    <label class="btn btn-primary" id="bellThree" onclick="setBell(this.id)">
+        <input type="radio" name="options" autocomplete="off" > Bell Three
+    </label>
+    <label class="btn btn-primary" id="bellFour" onclick="setBell(this.id)">
+        <input type="radio" name="options" autocomplete="off" > Bell Four
+    </label>
+{% endblock %}
 
 
-{% block myaudiofiles %}
-    {% for audio in myaudio %}
-        <label class="btn btn-primary" onclick="setAmbient(this.id)">
-            <input type="radio" name="options" autocomplete="off" > {{ myaudio.name }}
-        </label>
-  {% endfor %}
+
+{% block extraambientfiles %}
+    <label class="btn btn-primary" id="ambientThree" onclick="setAmbient(this.id)">
+        <input type="radio" name="options" autocomplete="off" > Ambient Three
+    </label>
+{% endblock %}
+
+{% block extraimagefiles %}
+    <div class="col-md-4 col-sm-4 col-xs-3">
+        <img class="img-responsive focus-image" id="buddha-image" onclick="setImage(this.id)" src="{% static "media/images/lord-buddha.jpg" %}" />
+    </div>
 {% endblock %}
 
 {% block myimagefiles %}
