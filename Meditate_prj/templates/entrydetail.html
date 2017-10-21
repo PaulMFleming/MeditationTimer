@@ -2,12 +2,12 @@
 
 {% block content %}
        <div>
-           <div>
-               <h1>{{ entry.created_date }}</h1>
-           </div>
-           <h3></h1><a href="">{{ entry.title }}</a></h3>
-           <p>{{ entry.content|linebreaks }}</p>
-           <p>{{ entry.intention|linebreaks }}</p>
+            <p>On {{ entry.created_date }}</p>
+            <p>During my meditation</p>
+            <p>My body was feeling: {{ entry.body|linebreaks }}</p>
+            <p>My mind was feeling: {{ entry.mind|linebreaks }}</p>
+            <p>I had the following thoughts, insights or feelings:</p>
+             <p>{{ entry.insights|linebreaks }}</p>
            <p><button class="btn btn-default" onclick="location.href='/diaryentries'">Back to Diary</button></p>
        </div>
 {% endblock %}
