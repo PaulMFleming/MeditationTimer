@@ -1,23 +1,6 @@
 {% extends 'timer.html' %}
 {% load static %}
 
-{% block intentionblock %}
-    <h2>Set an intention for your meditation</h2>
-    <form action="">
-        <select name="cars">
-            <option></option>
-            <option>I dedicate my meditation to calming my mind</option>
-            <option>I decdicate my meditation to reducing stress in my life</option>
-            <option>I dedicate my meditation to someone in need</option>
-            <option>I dedicate my meditation to all the sick people in the world</option>
-            <option>I dedicate my meditation to improving our environment</option>
-        </select>
-        <input type="submit" value="Submit">
-        <h4>Or write your own</h4>
-        <input type="text" id="intention-text-box">
-    </form>
-{% endblock %}
-
 {% block timermodal %}
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">

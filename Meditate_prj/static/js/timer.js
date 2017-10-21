@@ -114,7 +114,7 @@ function setPrepTime(prepTimeInSeconds) {
     console.log(prepCounterDisplay);
     document.getElementById("text").value = prepCounterDisplay;
     return prepCounterDisplay;
-    return prepCounter;
+    //return prepCounter;
 }
 
 function setTime(timeInSeconds) {
@@ -123,7 +123,7 @@ function setTime(timeInSeconds) {
     console.log(counterDisplay);
     document.getElementById("text").value = counterDisplay;
     return counterDisplay;
-    return counter;
+    //return counter;
 }
 
 function setBell(bellSound) {
@@ -143,7 +143,6 @@ function setAmbient(ambientSound) {
     ambientSampler = document.getElementById(AMBIENT_SAMPLER[ambientSound]);
     ambientSampler.play();
     return ambient;
-   // return ambientSampler;
 }
 
 function setImage(imageName) {
@@ -155,9 +154,6 @@ $('.user-uploaded-image').click(function(){
     $('.modal-content').css('background-image', 'url('+uploadedImageSrc+')');
     
     })
-
-
-
 
 function showDiaryEntryButton() {
     $(".hide-buttons").removeClass('hidden');
