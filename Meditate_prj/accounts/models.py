@@ -38,5 +38,5 @@ class AccountUserManager(UserManager):
 class User(AbstractUser):
     # abstracted class here so we can customize it later
     # for things like payments etc
-
+    stripe_id = models.CharField(max_length=40, default='')
     objects = AccountUserManager()

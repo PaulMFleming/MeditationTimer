@@ -167,3 +167,9 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 # In order to work with S3 this needs to be an absolute url to the media files
 # on the S3 server, hence the 'https://' 
 MEDIA_URL = 'https://' + AWS_S3_CUSTOM_DOMAIN + '/media/'
+
+
+# Stripe Environment Variables
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_AvpCDlvstfiG8aJg04QKhIS4')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_h7nJ6fMm169xVpqizlmtnvni')
+
