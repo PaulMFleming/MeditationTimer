@@ -8,6 +8,8 @@ var ambient = document.getElementById("no-ambient");
 var ambientSampler = document.getElementById("no-ambient");
 var image = document.getElementById("noImage");
 
+
+
 IMAGES = {
     "yinyang-image": "url(/static/media/images/yin-yang_stones.jpg)",
     "om-image": "url(/static/media/images/on_red_bg.jpg)",
@@ -141,12 +143,21 @@ function setAmbient(ambientSound) {
     ambientSampler = document.getElementById(AMBIENT_SAMPLER[ambientSound]);
     ambientSampler.play();
     return ambient;
-    return ambientSampler;
+   // return ambientSampler;
 }
 
 function setImage(imageName) {
     $(".modal-content").css('background-image', IMAGES[imageName]);
 }
+
+$('.user-uploaded-image').click(function(){
+    var src = $(this).find('img').attr('src');
+    $('.modal-content').css('background-image', 'url('+uploadedImageSrc+')');
+    
+    })
+
+
+
 
 function showDiaryEntryButton() {
     $(".hide-buttons").removeClass('hidden');

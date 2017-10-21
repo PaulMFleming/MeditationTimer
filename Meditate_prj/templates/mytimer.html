@@ -53,8 +53,11 @@
 
 {% block myimagefiles %}
     {% for image in myimages %}
+        <script type="text/javascript">
+            var uploadedImageSrc = '{{ MEDIA_URL }}{{ image.myimage }}'
+        </script>
         <div class="col-md-4 col-sm-4 col-xs-3">
-            <img class="img-responsive focus-image" onclick="setImage(this.id)" src="{{ MEDIA_URL }}{{ image.myimage }}" />
+            <img class="img-responsive focus-image user-uploaded-image" id="{{ image.pk }}" onclick="" src="{{ MEDIA_URL }}{{ image.myimage }}" />
         </div>
     {% endfor %}
 {% endblock %}

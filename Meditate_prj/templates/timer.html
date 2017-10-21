@@ -93,8 +93,10 @@
                 <img class="img-responsive focus-image" id="buddha-image" onclick="setImage(this.id)" src="{% static "media/images/lord-buddha.jpg" %}" />
             </div>
         </div>
-        {% block myimagefiles %}
-        {% endblock %}
+        <div class="row">
+            {% block myimagefiles %}
+            {% endblock %}
+        </div>
         <div class="row">
             <div class="checkbox">
                 <label><input type="checkbox" value="" id="no-image" onclick="setImage(this.id)">No image</label>
