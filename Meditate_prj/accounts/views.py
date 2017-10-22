@@ -3,10 +3,10 @@ from __future__ import unicode_literals
 
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from accounts.forms import UserRegistrationForm, UserLoginForm
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
-from accounts.forms import UserRegistrationForm, UserLoginForm
 from django.conf import settings
 import datetime
 import stripe
@@ -21,14 +21,14 @@ def register(request):
             try:
                 customer = stripe.Charge.create(
                         amount=100,
-                        currency="EUR",
+                        currency="eur",
                         description=form.cleaned_data['email'],
                         card=form.cleaned_data['stripe_id'],
                 )
                 if customer.paid:
                     form.save()
                     user = auth.authenticate(email=request.POST.get('email'),
-                                             password=request.POST.get('password1'))
+                                            password=request.POST.get('password1'))
                     if user:
                         auth.login(request, user)
                         messages.success(request, "You have successfully registered")
