@@ -31,8 +31,8 @@ def register(request):
                                             password=request.POST.get('password1'))
                     if user:
                         auth.login(request, user)
-                        messages.success(request, "You have successfully registered")
-                        return redirect(reverse('profile'))
+                        messages.success(request, "Thank you for registering. I hope you enjoy using Im.Om as much as I've enjoyed making it. Peace, love and thanks.")
+                        return redirect(reverse('mytimer'))
                     else:
                         messages.error(request, "unable to log you in at this time!")
                 else:

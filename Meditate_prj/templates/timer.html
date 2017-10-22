@@ -88,9 +88,11 @@
             </div>
         </div>
         <hr>
+        <div class="row col-sm-offset-4">
+            <button class="btn btn-lg btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Begin Meditation</button>
+            <hr>
+        </div>
 
-        <button class="btn btn-success" id="startButton" onclick="playTone(), prepCountdown()" data-toggle="modal" data-target="#myModal">Begin Meditation</button>
-          
         <div class="row">
             <h2>Set Focus Image</h2>
             <div class="checkbox">
@@ -107,7 +109,9 @@
             </div>
             {% block extraimagefiles %}
             {% endblock %}
+
         </div>
+        <br>
         <div class="row">
             {% block myimagefiles %}
             {% endblock %}

@@ -13,6 +13,18 @@
 {% endblock %}
 
 {% block content %}
+<div class="col-sm-10 col-sm-offset-1">
+    <h2>Register</h2>
+    <hr>
+    <p>The cost to register for a full account is a once off payment of €2.50
+        and this is used solely to pay for the hosting of this site, or, from
+        time to time to buy myself a nice cup of tea (I don't drink coffee). 
+        Thank you so much for visiting.
+    </p>
+    <p>
+        Peace.
+    </p>
+    <hr>
 <form role="form" method="post" id="register-form" action="{% url 'register' %}">
     <div id="credit-card-errors" style="display:none">
         <div class="alert-message block-message error" id="stripe-error-message"></div>
@@ -25,4 +37,5 @@
         <button type="submit" class="btn btn-primary">Create account</button>
     </div>
 </form>
+</div>
 {% endblock %}

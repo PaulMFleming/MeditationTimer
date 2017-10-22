@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% load bootstrap_tags %}
 {% block content %}
+<div class="col-sm-10 col-sm-offset-1">
     <form role="form" method="post" action="{% url 'login' %}">
         <legend>Login</legend>
         {% csrf_token %}
@@ -10,4 +11,5 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </form>
+</div>
 {% endblock %}
