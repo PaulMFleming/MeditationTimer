@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>My Meditation Diary</h1>
+<div class="col-sm-10 col-sm-offset-1">
+    <h2>My Meditation Diary</h2>
     <hr>
     {% for entry in entries %}
        <div>
@@ -18,4 +19,5 @@
            <p><button class="btn btn-default" onclick="location.href={{ entry.id }}">Read More</button></p>
        </div>
     {% endfor %}
+</div>
 {% endblock %}

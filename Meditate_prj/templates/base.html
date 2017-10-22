@@ -42,7 +42,9 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Stuff <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{% url 'profile' %}">My Profile</a></li>
+                                    <li class="dropdown-header">Hello {{ user.email }}</li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{% url 'myimages' %}">My Images</a></li>
                                     <li><a href="{% url 'diaryentries' %}">My Diary</a></li>
                                     <li><a href="{% url 'mytimer' %}">My Timer</a></li> 
                                     <li role="separator" class="divider"></li>
