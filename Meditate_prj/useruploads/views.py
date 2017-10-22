@@ -22,7 +22,7 @@ def ImageCreate(request):
             messages.error(request, "Unable to upload at this time")
     else:
         form = ImageForm()
-    return render(request, "myimages.html", {'form': form})
+    return render(request, "profile.html", {'form': form})
 
 
 def AudioCreate(request):
