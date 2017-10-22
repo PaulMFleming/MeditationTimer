@@ -20,27 +20,46 @@
 </head>
 <body>
 <div class="container">
-    <div class="masthead">
-        
-        <ul class="nav nav-pills pull-left">
-            <li><img class="navbar-brand" src="{% static "media/images/imomlogo.png" %}" />
-            </li>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'guide' %}">Guide</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
-                <li><a href="{% url 'profile' %}">Profile</a></li>
-                <li><a href="{% url 'diaryentries' %}">My Diary</a></li>
-                <li><a href="{% url 'mytimer' %}">My Timer</a></li>                
-            {% else %}
-                <li><a href="{% url 'timer' %}">Timer</a></li>            
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="{% url 'login' %}">Log In</a></li>
-            {% endif %}
-        </ul>
-        
-    </div>
-    <hr>
+        <div class="masthead">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a>
+                            <img id="imom-logo" style="" src="{% static "media/images/imomlogo.png" %}">
+                        </a>
+                    </div>
+                    
+                    <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'guide' %}">Guide</a></li>
+                            {% if user.is_authenticated %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Stuff <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'profile' %}">My Profile</a></li>
+                                    <li><a href="{% url 'diaryentries' %}">My Diary</a></li>
+                                    <li><a href="{% url 'mytimer' %}">My Timer</a></li> 
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                                </ul>
+                            </li>                   
+                        {% else %}
+                            <li><a href="{% url 'timer' %}">Timer</a></li>            
+                            <li><a href="{% url 'register' %}">Register</a></li>
+                            <li><a href="{% url 'login' %}">Log In</a></li>
+                        {% endif %}
+                        </ul>
+                    </div>
+            
+                </div>
+            </div>
+            <hr>
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
