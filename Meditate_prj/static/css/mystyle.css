@@ -1,5 +1,9 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cardo', serif;
+}
 body {
-    
+  margin-left: auto;
+  margin-right: auto;
 }
 .modal-dialog {
     width: 100%;
@@ -54,10 +58,26 @@ img:hover {
 }
 
 .jumbotron {
-  background-image: url(https://www.artofliving.org/sites/www.artofliving.org/files/wysiwyg_imageupload/2_27.jpg);
+  background-image: url(https://www.freewebheaders.com/wordpress/wp-content/gallery/yoga-meditation/chinese-shaolin-monk-meditating-website-header.jpg);
   background-position: center;
   background-size: cover;
-  color: #fff;
+  color: #f5f5f5;
+  font-size: large;
+  font-weight: bold;
+  min-height: 400px;
+  padding-top: 150px;
+}
+
+@media screen and (max-width: 699px) and (min-width: 520px) {
+  .jumbotron {
+      padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+  jumbotron {
+      padding-top: 150px;
+  }
 }
 
 

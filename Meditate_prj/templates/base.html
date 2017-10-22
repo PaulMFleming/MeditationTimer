@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{% static "media/images/favicon.ico" %}">
+    <!-- Google FOnt -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:700|Vollkorn" rel="stylesheet">
     <!-- Scripts are placed here instead of at the bottom of the file for Stripe to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,14 +21,16 @@
 <body>
 <div class="container">
     <div class="masthead">
+        
         <ul class="nav nav-pills pull-left">
+            <li><img class="navbar-brand" src="{% static "media/images/imomlogo.png" %}" />
+            </li>
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'guide' %}">Guide</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'diaryentries' %}">My Diary</a></li>
-                <li><a href="{% url 'myimages' %}">My Images</a></li>
                 <li><a href="{% url 'mytimer' %}">My Timer</a></li>                
             {% else %}
                 <li><a href="{% url 'timer' %}">Timer</a></li>            
@@ -34,7 +38,7 @@
                 <li><a href="{% url 'login' %}">Log In</a></li>
             {% endif %}
         </ul>
-        <h1><span class="fui-settings-16 muted ">Im.Om</span></h1>
+        
     </div>
     <hr>
     {% if messages %}
@@ -55,8 +59,6 @@
     <hr>
     <div class="footer text-center">
         <p>Made By Paul Fleming using Django </p>
-        <p>Meditation Timer is free and always will be.</p>
-        <p>If you like the app consider buying me some tea (I don't drink coffee)</p>
     </div>
 </div>
 </body>

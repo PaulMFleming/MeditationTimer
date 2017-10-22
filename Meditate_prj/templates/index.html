@@ -1,58 +1,75 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container text-center">
-        <div class="jumbotron">
+    <div class="container">
+        <div class="jumbotron text-center">
           <div id="quoteDisplay"></div>
           <br><br>
         </div>
         <hr>
-        <div class="col-md-12">
+        <div class="col-sm-10 col-sm-offset-1">
             <h2>Hello, Meditators!</h2>
-            <h4>Thanks for coming. I hope you enjoy using the meditation timer.
-                You can use it as much as you like for free and without 
-                registering an account. However, if you register you get some
-                pretty cool personalization features:
-            </h4>
+            <p>Thanks for visiting. I hope you enjoy using the meditation timer.</p>
+            <p>You can use the timer as much as you want for free. However if you create
+                an account you get some extra cool features.
+            </p>
+            <hr>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-10 col-sm-offset-1">
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Feature</th>
-                        <th>Annonymous User</th>
-                        <th>Registered User</th>
+                        <th><h4>What You Get</h4></th>
+                        <th><h4>Annonymous User</h4></th>
+                        <th><h4>Registered User</h4></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Set Intentions</strong></td>
-                        <td>Unavailable</td>
-                        <td>Available</td>
+                        <td><strong>Meditation Timer</strong></td>
+                        <td>Yep</td>
+                        <td>Yep</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Meditation Guide</strong></td>
+                        <td>Yep</td>
+                        <td>Yep</td>
                     </tr>
                     <tr>
                         <td><strong>Meditation Insight Diary</strong></td>
-                        <td>Unavailable</td>
-                        <td>Available</td>
+                        <td>Nope</td>
+                        <td>Yep</td>
                     </tr>
                     <tr>
                         <td><strong>Custom Focus Images</strong></td>
-                        <td>Unavailable</td>
-                        <td>Available</td>
+                        <td>Nope</td>
+                        <td>Yep</td>
                     </tr>
                     <tr>
-                        <td><strong>Custom Background Audio</strong></td>
-                        <td>Unavailable</td>
-                        <td>Available</td>
+                        <td><strong>Extra Focus Images and Background Audio</strong></td>
+                        <td>Nope</td>
+                        <td>Yep</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td>Free</td>
+                        <td>€2.50</td>
                     </tr>
                 </tbody>
             </table>
+            <hr>
+            
         </div>
-        <div class="col-sm-12">
-            <h4>Don't forget to check out our meditation guide.</h4>
-            <h4>And check back soon as I'll be adding more features in the future.</h4>
-            <h4>Peace, love and many thanks for visiting.</h4>
-            <h4>Namaste</h4>
+        <div class="col-sm-10 col-sm-offset-1">
+            <p>The cost to register for a full account is a once off payment of €2.50
+                and this is used solely to pay for the hosting of this site, or, from
+                time to time to buy myself a nice cup of tea (I don't drink coffee)
+            </p>
+            <p> I'll be adding more features in the future so don't forget to check 
+                back often and while you're here give yourself and treat and take a few
+                minutes for yourself. Meditating frequently is fuel for the soul after all.
+            <p>
+            <h4>Peace, love, and many thanks for visiting. Namaste.</h4>
         </div>
     </div>
 
