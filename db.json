@@ -1,0 +1,507 @@
+[
+{
+    "model": "sessions.session",
+    "pk": "236folnmczw1eulmpvcwj26wi5no10xf",
+    "fields": {
+        "session_data": "M2MzZjdiODVkYzFhYTdmNzk3NDEwYzEzMWVkZDZlODExNDVkYzZiYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImY2NjM0MTA0NGI5NzYwOTgxYzFmNzQwMzQ1MjZhNjBkNTBkNDIxNTAiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiNiJ9",
+        "expire_date": "2017-11-06T12:38:16.710Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3ggn5w12ebvslpjnrzklz9lq8tgzu08u",
+    "fields": {
+        "session_data": "M2IyMWQ1NDIwZTBiMmI4ZmMyYmJhYTc5YmY0ZGEyNmNmZDE0NTkwNjp7Il9hdXRoX3VzZXJfaGFzaCI6IjVjNDFjMzk3YTg0ZTdmZDA5OGFjZGJlZTM1NTc5ZGY3ZDBjZTNmMmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1In0=",
+        "expire_date": "2017-11-04T20:20:13.807Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5jx0g80dfdhxke1zr2qvsjnhvw44baq6",
+    "fields": {
+        "session_data": "M2IyMWQ1NDIwZTBiMmI4ZmMyYmJhYTc5YmY0ZGEyNmNmZDE0NTkwNjp7Il9hdXRoX3VzZXJfaGFzaCI6IjVjNDFjMzk3YTg0ZTdmZDA5OGFjZGJlZTM1NTc5ZGY3ZDBjZTNmMmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1In0=",
+        "expire_date": "2017-10-31T17:04:07.390Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "8lwr3lj067g9llcljxjl719zdcdyzhuy",
+    "fields": {
+        "session_data": "ZjI1OWJhNDViZjFmYTY3ODY2YmVlMzgwZjdiMGNlNWE5YjEzMmE2Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjVjNDFjMzk3YTg0ZTdmZDA5OGFjZGJlZTM1NTc5ZGY3ZDBjZTNmMmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiNSJ9",
+        "expire_date": "2017-11-01T16:52:04.407Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ejrjfuzfbgn0jizeqbj8vkt6yubkriqa",
+    "fields": {
+        "session_data": "ZjI1OWJhNDViZjFmYTY3ODY2YmVlMzgwZjdiMGNlNWE5YjEzMmE2Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjVjNDFjMzk3YTg0ZTdmZDA5OGFjZGJlZTM1NTc5ZGY3ZDBjZTNmMmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiNSJ9",
+        "expire_date": "2017-11-06T14:36:15.977Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ksxi856xkt3r736foxyjwpkohfujmj0d",
+    "fields": {
+        "session_data": "ZjI1OWJhNDViZjFmYTY3ODY2YmVlMzgwZjdiMGNlNWE5YjEzMmE2Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjVjNDFjMzk3YTg0ZTdmZDA5OGFjZGJlZTM1NTc5ZGY3ZDBjZTNmMmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiNSJ9",
+        "expire_date": "2017-11-01T17:53:49.136Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ti3xyh7gjikazsuegyrf8i5oq0llr3jx",
+    "fields": {
+        "session_data": "NGZlNDdiM2QxNjIwYzhiNzI5NTU0MjIwZmE2ZDBhMmQ3MjMyZmI4Yzp7fQ==",
+        "expire_date": "2017-11-05T21:48:44.263Z"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$Mj56mT5dLlHt$PH8c27p5SFSOkf1khS5pDMmI0mmD1W4MiAiCCNX2t5A=",
+        "last_login": "2017-10-23T14:36:15.963Z",
+        "is_superuser": true,
+        "username": "paul.stillbreathing@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "paul.stillbreathing@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-10-14T11:19:00.990Z",
+        "stripe_id": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$qpWFbyt6Ywxc$aLyqKt0hmlm26ZKQjeaXv+TKBl+NwzF1CroKR2BeRDg=",
+        "last_login": "2017-10-23T12:38:16.708Z",
+        "is_superuser": false,
+        "username": "test@testmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@testmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-10-14T15:01:44.575Z",
+        "stripe_id": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$65COzvWoFSUX$j/EIK9aIRKQbu4vXK/ofhxghlRwaOR42p/+Y6TubSuY=",
+        "last_login": "2017-10-22T08:40:38.860Z",
+        "is_superuser": false,
+        "username": "johnson@johnson.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "johnson@johnson.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-10-22T08:40:37.504Z",
+        "stripe_id": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$di6Ew9jLeco6$YJwr/d2k19EuHfJhOWkRgOPh93Rq6nYNrvbmeKSaax4=",
+        "last_login": "2017-10-22T10:20:35.682Z",
+        "is_superuser": false,
+        "username": "sandra@sandra.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "sandra@sandra.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-10-22T10:20:34.382Z",
+        "stripe_id": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$5XjxJPaxj56z$1U0IXv7UFE+USUPMYJUQFoxHH06xyLwmMpHsi8elrbo=",
+        "last_login": "2017-10-22T21:48:44.274Z",
+        "is_superuser": false,
+        "username": "leonarcohen@leonardcohen.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "leonarcohen@leonardcohen.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-10-22T21:48:42.730Z",
+        "stripe_id": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$DPKzoKENoKWw$ZxJ3aVoysipk1S9se6ecBrLgIfc2KzIpRomVH2IkUEM=",
+        "last_login": "2017-10-22T21:51:57.273Z",
+        "is_superuser": false,
+        "username": "socks@socks.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "socks@socks.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-10-22T21:51:55.956Z",
+        "stripe_id": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 1,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "First Test",
+        "created_date": "2017-10-14T11:36:20.546Z",
+        "body": null,
+        "mind": "OK",
+        "insights": "blah blah blah. Testing testing 1 2 3. Change this later"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 2,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "Second Post",
+        "created_date": "2017-10-14T12:22:29.766Z",
+        "body": null,
+        "mind": "OK",
+        "insights": "some stuff that goes here"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 3,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "Test three",
+        "created_date": "2017-10-14T14:56:00.072Z",
+        "body": null,
+        "mind": "OK",
+        "insights": "Hopefully this works"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 4,
+    "fields": {
+        "author": [
+            "test@testmail.com"
+        ],
+        "title": "Other User / Author",
+        "created_date": "2017-10-14T15:12:03.614Z",
+        "body": null,
+        "mind": "OK",
+        "insights": "I fricking hope this works!"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 5,
+    "fields": {
+        "author": [
+            "test@testmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-21T17:23:38.649Z",
+        "body": "bd",
+        "mind": "good",
+        "insights": "Test test test"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 6,
+    "fields": {
+        "author": [
+            "test@testmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-21T17:24:21.517Z",
+        "body": "OK",
+        "mind": "OK",
+        "insights": "test test"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 7,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-22T20:39:44.639Z",
+        "body": "I felt felt loose and calm",
+        "mind": "I felt at peace and calm",
+        "insights": "I love hanging out in the spaces between my thoughts."
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 8,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-22T20:46:50.554Z",
+        "body": "loose and calm",
+        "mind": "hung out in the gaps between my thoughts",
+        "insights": "This was a good session"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 9,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-22T21:17:11.054Z",
+        "body": "loose and calm",
+        "mind": "was at peace and felt calm",
+        "insights": "This was another test which was accompanied by a tasty suprreese!"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 10,
+    "fields": {
+        "author": [
+            "test@testmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-22T21:37:17.518Z",
+        "body": "lots of sensations and let them pass by",
+        "mind": "wandered a lot",
+        "insights": "This was the first time I've actually used the timer, but I' d a big joint and I'm really light headed right now!"
+    }
+},
+{
+    "model": "diary.diaryentry",
+    "pk": 11,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "title": "",
+        "created_date": "2017-10-22T22:50:01.262Z",
+        "body": "loose and calm",
+        "mind": "hung out in the gaps between my thoughts",
+        "insights": "It was marvellous."
+    }
+},
+{
+    "model": "useruploads.uploadimage",
+    "pk": 3,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "myimage": "myimages/alex-grey-hd-wallpaper-for-desktop-background-download-alex-grey-images.jpg",
+        "uploaded_at": "2017-10-17T17:23:41.245Z"
+    }
+},
+{
+    "model": "useruploads.uploadimage",
+    "pk": 4,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "myimage": "myimages/Om3564.jpg",
+        "uploaded_at": "2017-10-17T19:28:42.219Z"
+    }
+},
+{
+    "model": "useruploads.uploadimage",
+    "pk": 7,
+    "fields": {
+        "author": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "myimage": "myimages/alex-grey-hd-wallpaper-download-alex-grey-images-free.jpg",
+        "uploaded_at": "2017-10-20T21:34:40.490Z"
+    }
+},
+{
+    "model": "useruploads.uploadimage",
+    "pk": 8,
+    "fields": {
+        "author": [
+            "johnson@johnson.com"
+        ],
+        "myimage": "myimages/tao_of_pooh_spending_time.png",
+        "uploaded_at": "2017-10-22T08:42:05.979Z"
+    }
+},
+{
+    "model": "useruploads.uploadimage",
+    "pk": 9,
+    "fields": {
+        "author": [
+            "test@testmail.com"
+        ],
+        "myimage": "myimages/wallpaper_bagua_2560x1440.jpg",
+        "uploaded_at": "2017-10-22T22:52:27.473Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-10-14T11:36:20.549Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "diary",
+            "diaryentry"
+        ],
+        "object_id": "1",
+        "object_repr": "First Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-10-14T11:49:22.747Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "diary",
+            "diaryentry"
+        ],
+        "object_id": "1",
+        "object_repr": "First Test",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-10-14T12:22:29.768Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "diary",
+            "diaryentry"
+        ],
+        "object_id": "2",
+        "object_repr": "Second Post",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-10-17T17:32:12.702Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "useruploads",
+            "uploadimage"
+        ],
+        "object_id": "1",
+        "object_repr": "UploadImage object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-10-20T19:13:22.591Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "useruploads",
+            "uploadimage"
+        ],
+        "object_id": "2",
+        "object_repr": "UploadImage object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-10-20T21:36:31.316Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "useruploads",
+            "uploadimage"
+        ],
+        "object_id": "6",
+        "object_repr": "UploadImage object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-10-20T21:36:45.198Z",
+        "user": [
+            "paul.stillbreathing@gmail.com"
+        ],
+        "content_type": [
+            "useruploads",
+            "uploadimage"
+        ],
+        "object_id": "5",
+        "object_repr": "UploadImage object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]
