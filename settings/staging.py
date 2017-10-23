@@ -1,4 +1,5 @@
 from base import *
+import dj_databse_url
 
 DEBUG = False
 
@@ -10,6 +11,11 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_h7nJ6fMm169xVpqizlmtnvni')
 
 SITE_URL = 'https://imom.herokuapp.com'
 ALLOWED_HOSTS.append('imom.herokuapp.com')
+
+# Load the ClearDB connection details from the environment variable
+DATABASES = {
+    'default': dj_database_url.config('CLEARDB_DATABASE_URL')
+}
 
 # Log DEBUG information to the console
 LOGGING = {
