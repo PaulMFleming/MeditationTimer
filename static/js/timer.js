@@ -11,8 +11,8 @@ var image = document.getElementById("noImage");
 
 IMAGES = {
     "yinyang-image": "url(https://imom-assets.s3.amazonaws.com/static/media/images/yin-yang_stones.jpg)",
-    "om-image": "url(https://imom-assets.s3.amazonaws.com//static/media/images/on_red_bg.jpg)",
-    "buddha-image": "url(https://imom-assets.s3.amazonaws.com//static/media/images/lord-buddha.jpg)",
+    "om-image": "url(https://imom-assets.s3.amazonaws.com/static/media/images/on_red_bg.jpg)",
+    "buddha-image": "url(https://imom-assets.s3.amazonaws.com/static/media/images/lord-buddha.jpg)",
     "no-image": "url(none)",
 }
 
@@ -150,7 +150,7 @@ function setImage(imageName) {
 
 $('.user-uploaded-image').click(function(){
     var src = $(this).find('img').attr('src');
-    $('.modal-content').css('background-image', 'url('+uploadedImageSrc+')');
+    $('.modal-content').css('background-image', 'url('+this+uploadedImageSrc+')');
     
     })
 
