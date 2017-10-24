@@ -149,8 +149,8 @@ function setImage(imageName) {
 } 
 
 $('.user-uploaded-image').click(function(){
-    var src = $(this).find('img').attr('src');
-    $('.modal-content').css('background-image', 'url('+this+uploadedImageSrc+')');
+    var src = $(this).attr('src');
+    $('.modal-content').css('background-image', 'url('+src+')');
     
     })
 

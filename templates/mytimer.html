@@ -53,9 +53,6 @@
 
 {% block myimagefiles %}
     {% for image in myimages %}
-        <script type="text/javascript">
-            var uploadedImageSrc = '{{ MEDIA_URL }}{{ image.myimage }}'
-        </script>
         <div class="col-md-4 col-sm-12 col-xs-12">
             <img class="img-responsive focus-image user-uploaded-image image-effect-class" id="{{ image.pk }}" onclick="" src="{{ MEDIA_URL }}{{ image.myimage }}" />
         </div>
