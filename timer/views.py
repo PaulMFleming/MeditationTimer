@@ -13,7 +13,7 @@ def get_timer(request):
 def get_mytimer(request):
     return render(request, 'mytimer.html')
 
-def get_myimages(request):
+def get_mytimer(request):
     myimages = UploadImage.objects.filter(author=request.user)
     context = {'myimages': myimages}
     return render(request, "mytimer.html", context)

@@ -29,14 +29,24 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    # hello app urls
     url(r'^$', hello_views.get_index, name='index'),
     url(r'^guide/$', hello_views.get_guide, name='guide'),
+
+    # timer app urls
     url(r'^timer/$', timer_views.get_timer, name='timer'),
-    url(r'^mytimer/$', useruploads_views.get_mytimer, name='mytimer'),
-    url(r'^register/$', accounts_views.register, name='register'),
+
+    # useruploads app views
+    url(r'^mytimer/$', timer_views.get_mytimer, name='mytimer'),
     url(r'^myimages/$', useruploads_views.ImageCreate, name='myimages'),
+    
+    # accounts app views
+    url(r'^register/$', accounts_views.register, name='register'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
+    
+    # diary app views
     url(r'^diaryentries/$', diary_views.entry_list, name='diaryentries'),
     url(r'^diaryentries/(?P<id>\d+)/$', diary_views.entry_detail, name='entrydetail'),
     url(r'^diary/new/$', diary_views.new_entry, name='new_entry'),
