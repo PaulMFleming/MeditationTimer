@@ -36,9 +36,9 @@ urlpatterns = [
 
     # timer app urls
     url(r'^timer/$', timer_views.get_timer, name='timer'),
-
-    # useruploads app views
     url(r'^mytimer/$', timer_views.get_mytimer, name='mytimer'),
+    
+    # useruploads app views
     url(r'^myimages/$', useruploads_views.ImageCreate, name='myimages'),
     
     # accounts app views

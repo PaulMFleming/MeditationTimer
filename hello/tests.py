@@ -11,7 +11,15 @@ class HomeTestPage(TestCase):
         home_page = resolve('/')
         self.assertEqual(home_page.func, get_index)
 
+    def test_home_page_status_code_is_ok(self):
+        home_page = self.client.get('/')
+        self.assertEqual(home_page.status_code, 200)
+
 class GuideTestPage(TestCase):
     def test_guide_page_resolves(self):
         guide_page = resolve('/guide/')
         self.assertEqual(guide_page.func, get_guide)
+
+    def test_guide_page_status_code_is_ok(self):
+        guide_page = self.client.get('/guide/')
+        self.assertEqual(guide_page.status_code, 200)

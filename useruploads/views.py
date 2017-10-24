@@ -23,20 +23,3 @@ def ImageCreate(request):
     else:
         form = ImageForm()
     return render(request, "myimages.html", {'form': form})
-
-
-def AudioCreate(request):
-    if request.method == 'POST':
-        form = AudioForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(form.get_absolute_url())
-    else:
-        form = AudioForm()
-    return render(request, "mysounds.html", {'form': form})
-
-
-def get_mytimer(request):
-    myimages = UploadImage.objects.filter(author=request.user)
-    context = {'myimages': myimages}
-    return render(request, "mytimer.html", context)

@@ -48,9 +48,6 @@ def register(request):
  
     return render(request, 'register.html', args)
 
-@login_required(login_url='/login/')
-def profile(request):
-    return render(request, 'profile.html')
 
 
 def login(request):
