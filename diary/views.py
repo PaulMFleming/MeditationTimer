@@ -17,7 +17,7 @@ def entry_list(request):
     Return all the diary entries owner by logged in user and 
     render them to the diaryentries.html template
     """
-    entries = DiaryEntry.objects.filter(author=request.user)
+    entries = DiaryEntry.objects.filter(author=request.user).order_by('-created_date')
     context = {'entries': entries}
     return render(request, "diaryentries.html", context)
 
