@@ -16,6 +16,7 @@ body {
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0); 
     box-shadow: 0 1px 10px rgba(0,0,0,0); 
     background-image: none;
+    border-bottom: none;
 }
 .navbar-default {
   background-color: transparent;
@@ -24,7 +25,19 @@ body {
 .nav {
   padding-top: 100px;
 }
-
+@media only screen and (max-width: 500px) {
+  .nav {
+    padding-top: 5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar .dropdown-menu a {
+    color: #333333;
+  }
+  .navbar .dropdown-header {
+    color: #999999;
+  }
+}
 /* timer modal styles */
 .modal-dialog {
     width: 100%;
@@ -66,7 +79,12 @@ body {
 }
 
 
-.navbar-toggle .icon-bar{ background-color: #2fa4e7;}
+.navbar-toggle {
+  margin-top: 110px;
+}
+.navbar-toggle .icon-bar{ 
+  background-color: #2fa4e7;
+}
 
 
 .jumbotron {
