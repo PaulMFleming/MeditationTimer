@@ -146,7 +146,12 @@ function setAmbient(ambientSound) {
 
 function setImage(imageName) {
     $(".modal-content").css('background-image', IMAGES[imageName]);
+    var
 }
+$('.default-time-image').click(function(){
+    var src = $(this).find('img').attr('src');
+    $('.modal-content').css('background-image', 'url('+src+')');
+})
 
 $('.user-uploaded-image').click(function(){
     var src = $(this).find('img').attr('src');
