@@ -14,9 +14,13 @@ The project came about due to a personal want for a meditation timer that was si
 I purposely kept the design as simple as possible to avoid distractions and I choose fonts and colors that convey feelings of softness and relaxation. The site is responsively designed so it works on all screen sizes.
 
  Dependencies       |    Reason For Use
- ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Bootstrap          | Bootstrap is great for ease of use, in particular I used Bootstrap for the sites responsivity and layout. I used it's navigation classes for navigation management but I                           | changed the default styles to suit my own needs. I used a Bootstrap modal to contain the timer itself (seen when users are meditating) and I used a jumbotron to host the 
-                    | image and quote generator on the home page.
+ ------------------ |------------------------------------------------------------------------------------------------------------------------------
+ Bootstrap          | Bootstrap is great for ease of use, in particular I used Bootstrap for the sites responsivity and layout. I used it's 
+                      navigation classes for navigation management but I changed the default styles to suit my own needs. I used a Bootstrap 
+                      modal to contain the timer itself (seen when users are meditating) and I used a jumbotron to show off the image and 
+                      quote generator on the home page.
+Django              | The site is built using the Django Framework because it works extremely well with databases and handling user authentication
+                      both of which are paramount for the site to work. Django is also
  
 ## Author and Contributors
 * Paul Fleming - Coding and Design
