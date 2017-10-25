@@ -1,3 +1,9 @@
+//
+// Custom script to control the Meditation Timer and 
+// it's various components
+//
+
+// set variables
 var counter =  180;
 var prepCounter = 10;
 var t;
@@ -51,7 +57,7 @@ AMBIENT_SAMPLER = {
     "noAmbient": "no-ambient",
 }
 
-
+// functions to control the timer itself
 function prepCountdown() {
     document.getElementById("text").value = moment.utc(prepCounter*1000).format('mm:ss');
     prepCounter--;
@@ -107,13 +113,13 @@ function playTone() {
     tone.play();
 }
 
+// Time control functions for the timer
 function setPrepTime(prepTimeInSeconds) {
     prepCounter = parseInt(PREP_TIMER[prepTimeInSeconds]);
     prepCounterDisplay = moment.utc(prepCounter*1000).format('mm:ss');
     console.log(prepCounterDisplay);
     document.getElementById("text").value = prepCounterDisplay;
     return prepCounterDisplay;
-    //return prepCounter;
 }
 
 function setTime(timeInSeconds) {
@@ -122,9 +128,9 @@ function setTime(timeInSeconds) {
     console.log(counterDisplay);
     document.getElementById("text").value = counterDisplay;
     return counterDisplay;
-    //return counter;
 }
 
+// Audio element control functions for the timer
 function setBell(bellSound) {
     tone.pause();
     tone.currentTime = 0;
@@ -144,6 +150,7 @@ function setAmbient(ambientSound) {
     return ambient;
 }
 
+// functions that control setting the backgrounds in the timer
 function setImage(imageName) {
     $(".modal-content").css('background-image', IMAGES[imageName]);
 } 
@@ -154,6 +161,7 @@ $('.user-uploaded-image').click(function(){
     
     })
 
+    // function to toggle visibility of the write in your diary button
 function showDiaryEntryButton() {
     $(".hide-buttons").removeClass('hidden');
 }
