@@ -5,11 +5,14 @@ from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect
-from .forms import ImageForm, AudioForm
+from .forms import ImageForm
 from .models import UploadImage
 # Create your views here.
 
 def ImageCreate(request):
+    """
+    View controls submitting Image upload form
+    """
     if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():

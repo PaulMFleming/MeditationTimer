@@ -4,6 +4,10 @@ from accounts.models import User
 from django.core.exceptions import ValidationError
 
 class UserRegistrationForm(UserCreationForm):
+    """
+    Creates a new user and processes their credit card
+    for payment
+    """
     MONTH_ABBREVIATIONS = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
     'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'

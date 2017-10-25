@@ -21,6 +21,7 @@
         </p>
         <hr>
         <div class="row">
+            <!-- Prep Time Section -->
             <div class="col-sm-6">
                 <h2>Set Prep Time</h2>
                 <div class="btn-group" data-toggle="buttons">
@@ -36,6 +37,7 @@
                 </div>  
             </div>
             <div class="col-sm-6">
+                <!-- Meditation Time Section -->
                 <h2>Set Meditation Time</h2>
                 <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-primary active" id="threeMin" onclick="setTime(this.id)">
@@ -61,6 +63,7 @@
         </div>
 
         <div class="row">
+            <!-- Bell Sound Section -->
             <div class="col-sm-6">
                 <h2>Set Bell Sound</h2>
                 <div class="btn-group" data-toggle="buttons">
@@ -74,6 +77,8 @@
                    {% endblock %}
                 </div>
             </div>
+
+            <!-- Ambient Sound Section -->
             <div class="col-sm-6">
                 <h2>Set Ambient Sound</h2>
                 <div class="btn-group" data-toggle="buttons">
@@ -97,6 +102,7 @@
             <hr>
         </div>
 
+        <!-- Focus Image Section -->
         <div class="row">
             <h2>Set Focus Image</h2>
             <div class="checkbox">
@@ -126,7 +132,7 @@
         
     
     {% block timermodal %}
-    <!-- Modal -->
+    <!-- Modal for timer -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog modal-lg">    
         <!-- Modal content-->
@@ -191,7 +197,6 @@
     <!-- Add Moment.js for easier time formatting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <!-- Custom script to control the timer -->
-
     <script type="text/javascript" src="{% static "js/timer.js" %}"></script>
 {% endblock %}
 </div>

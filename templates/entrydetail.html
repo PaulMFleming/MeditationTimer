@@ -2,13 +2,13 @@
 
 {% block content %}
 <div class="col-sm-10 col-sm-offset-1">
-           <h2>On {{ entry.created_date }}</h2>
-           <hr>
-           <h2>During my meditation </h2>
-           <p>My body felt {{ entry.body }} and my mind {{ entry.mind }}</p>
-           <h2>I had the following thoughts, insights or feelings:</h2>
-            <p>{{ entry.insights|linebreaks }}</p>
-            <br><hr>
-           <p><button class="btn btn-default" onclick="location.href='/diaryentries'">Back to Diary</button></p>
+    <h2>On {{ entry.created_date }}</h2>
+    <hr>
+    <h2>During my meditation </h2>
+    <p>My body felt {{ entry.body }} and my mind {{ entry.mind }}</p>
+    <h2>I had the following thoughts, insights or feelings:</h2>
+    <p>{{ entry.insights|linebreaks }}</p>
+    <br><hr>
+    <p><button class="btn btn-default" onclick="location.href='/diaryentries'">Back to Diary</button></p>
 </div>
 {% endblock %}

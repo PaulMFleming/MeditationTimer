@@ -1,13 +1,10 @@
 from django import forms
-from .models import UploadImage, UploadAudio
+from .models import UploadImage
 
 class ImageForm(forms.ModelForm):
+    """
+    Creates form for image uploads
+    """
     class Meta:
         model = UploadImage
         fields = ['myimage']
-
-
-class AudioForm(forms.ModelForm):
-    class Meta:
-        model = UploadAudio
-        fields = ['myaudio']

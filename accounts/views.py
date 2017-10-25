@@ -15,6 +15,9 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET
  
 def register(request):
+    """
+    View for registering as a new user
+    """
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
@@ -51,6 +54,9 @@ def register(request):
 
 
 def login(request):
+    """
+    The login view
+    """
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
         if form.is_valid():
@@ -73,6 +79,9 @@ def login(request):
 
 
 def logout(request):
+    """
+    The logout view
+    """
     auth.logout(request)
     messages.success(request, 'You have successfully logged out. See you soon.')
     return redirect(reverse('index'))

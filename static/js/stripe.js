@@ -1,3 +1,7 @@
+// 
+// Script to control Stripe card validation
+//
+
 $(function() {
     $("#register-form").submit(function() {
         var form = this;

@@ -1,35 +1,52 @@
+/* My Custom CSS styles */
+
+/* body styles */
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Cardo', serif;
 }
+
 body {
   margin-left: auto;
   margin-right: auto;
   font-size: 14pt;
 }
+
+/* over-ride Bootstrap classes for custom navbar */
+.navbar {
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0); 
+  box-shadow: 0 1px 10px rgba(0,0,0,0); 
+  background-image: none;
+  border-bottom: none;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.nav {
+  padding-top: 100px;
+}
+
+.navbar-toggle {
+  margin-top: 110px;
+}
+
+.navbar-toggle .icon-bar{ 
+  background-color: #2fa4e7;
+}
+
 #imom-logo {
   max-width:250px;
   margin-top: 30px;
 }
 
-/* over-ride Bootstrap classes for custom navbar */
-.navbar {
-    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0); 
-    box-shadow: 0 1px 10px rgba(0,0,0,0); 
-    background-image: none;
-    border-bottom: none;
-}
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-}
-.nav {
-  padding-top: 100px;
-}
 @media only screen and (max-width: 500px) {
   .nav {
     padding-top: 5px;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .navbar .dropdown-menu a {
     color: #333333;
@@ -38,6 +55,7 @@ body {
     color: #999999;
   }
 }
+
 /* timer modal styles */
 .modal-dialog {
     width: 100%;
@@ -46,15 +64,15 @@ body {
     padding: 0;
   }
   
-  .modal-content {
-    height: auto;
-    min-height: 100%;
-    border-radius: 0;
-    background-image: url();
-    background-size: cover;
-    background-position: center;
-    background-color: #1f1d1d;
-  }
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-color: #1f1d1d;
+}
 
 .modal-body>input {
   font-family: inherit;
@@ -78,15 +96,7 @@ body {
   width: 20%;
 }
 
-
-.navbar-toggle {
-  margin-top: 110px;
-}
-.navbar-toggle .icon-bar{ 
-  background-color: #2fa4e7;
-}
-
-
+/*  Home page quote generator styles */
 .jumbotron {
   background-image: url(https://www.freewebheaders.com/wordpress/wp-content/gallery/yoga-meditation/chinese-shaolin-monk-meditating-website-header.jpg);
   background-position: center;
@@ -110,11 +120,7 @@ body {
   }
 }
 
-
-input#intention-text-box {
-  width: 75%;
-}
-
+/* timer buttons */
 .hidden {
   visibility: hidden;
 }

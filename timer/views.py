@@ -14,6 +14,10 @@ def get_mytimer(request):
     return render(request, 'mytimer.html')
 
 def get_mytimer(request):
+    """
+    Get the images the logged in user has 
+    uploaded and render them to the template
+    """
     myimages = UploadImage.objects.filter(author=request.user)
     context = {'myimages': myimages}
     return render(request, "mytimer.html", context)

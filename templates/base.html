@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{% static "media/images/favicon.ico" %}">
-    <!-- Google FOnt -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Cardo:700|Vollkorn" rel="stylesheet">
     <!-- Scripts are placed here instead of at the bottom of the file for Stripe to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,7 +21,7 @@
 <body>
 <div class="container">
         <div class="masthead">
-
+            <!-- Navigation -->
             <div class="navbar">
                 <div class="container">
                     <div class="navbar-header">
@@ -65,6 +65,8 @@
             </div>
             <hr>
         </div> 
+
+        <!-- message alrert area -->
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -75,12 +77,13 @@
         </div>
     {% endif %}
  
- 
+    <!-- Main content filled in by child templates here -->
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
     <hr>
+    <!-- Footer -->
     <div class="footer text-center">
         <p>Made By Paul Fleming using Django |<a href="https://github.com/PaulMFleming" target="blank"> 
             Github </a> | <a href="https://www.linkedin.com/in/paulmfleming/" target="blank">LinkedIn</a></p>

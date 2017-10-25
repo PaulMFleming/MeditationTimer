@@ -50,13 +50,14 @@ urlpatterns = [
     url(r'^diaryentries/$', diary_views.entry_list, name='diaryentries'),
     url(r'^diaryentries/(?P<id>\d+)/$', diary_views.entry_detail, name='entrydetail'),
     url(r'^diary/new/$', diary_views.new_entry, name='new_entry'),
-   # url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_}),
 ]
 
+# for working in Debug mode
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# needed to use the Django Debug TOolbar
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [

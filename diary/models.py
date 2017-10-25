@@ -6,8 +6,7 @@ from django.utils import timezone
 from django.conf import settings
 from django import forms
 
-# Create your models here.
-
+# Choices to be used with the new diary entry form
 BODY_CHOICES = [
     ('restless or jittery', 'restless or jittery'),
     ('lots of sensations and let them pass by', 'lots of sensations and let them pass by'),
@@ -26,7 +25,7 @@ MIND_CHOICES = [
 
 class DiaryEntry(models.Model):
     """
-    Define the diary entry model here
+    Data model for diary entries
     """
 
     author = models.ForeignKey(settings.AUTH_USER_MODEL) # link author to the registered user

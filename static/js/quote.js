@@ -1,3 +1,9 @@
+// 
+// Script to control the home page Quote Generator 
+// All quotes are from the Tao Te Ching by La Tzu 
+// The inspiration for this came from freecodecamp.com
+//
+
 var qoutes = [
     
     '<p>“Those who know do not speak. Those who speak do not know.” \

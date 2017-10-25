@@ -130,9 +130,11 @@ The project came about due to a personal want for a meditation timer that was si
 I purposely kept the design as simple as possible to avoid distractions and I choose fonts and colors that convey feelings of softness and relaxation. The site is responsively designed so it works on all screen sizes.
 
 ## Author and Contributors
-* Paul Fleming - Coding and Design
+* [Paul Fleming] (https://www.linkedin.com/in/paulmfleming/) - Coding and Design
 
-* Square Apple Graphics - Im.Om Logo
+* [Square Apple Graphics](https://www.facebook.com/squareapplegraphics) - Im.Om Logo
+
+* [Headers](https://www.freewebheaders.com) and [Focus Images](www.desktopnexus.com)
 
 * [klankbeeld](https://freesound.org/people/klankbeeld/) on www.freesound.org - Ambient Sounds 
 
@@ -159,4 +161,4 @@ I purposely kept the design as simple as possible to avoid distractions and I ch
        Yb,_________,a8"'Y8b  ,ad8"
         "8ggggggggg8"   'Y88888Y"
            """"""""       """"'
-Srihari Gopal
+
