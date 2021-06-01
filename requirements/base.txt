@@ -18,5 +18,5 @@ s3transfer==0.1.11
 six==1.11.0
 sqlparse==0.2.4
 stripe==1.69.0
-urllib3==1.22
+urllib3==1.26.5
 gunicorn==19.4
